@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "platform": "plateforme",
+    "product": "produit",
+    "company": "entreprise",
+    "pricing": "tarifs",
+    "docs": "docs",
+    "github": "github",
+    "features": "fonctionnalités",
+    "examples": "exemples",
+    "about": "à propos",
+    "blog": "blog",
+    "careers": "carrières"
+  },
+  "pricing": {
+    "title": "tarifs",
+    "subtitle": "commencez gratuitement. évoluez selon vos besoins.\naucun frais caché. annulez à tout moment.",
+    "monthly": "mensuel",
+    "yearly": "annuel",
+    "save": "économisez 17%",
+    "community": "communauté",
+    "serverless": "serverless",
+    "dedicated": "dédié",
+    "enterprise": "entreprise",
+    "mostPopular": "le plus populaire",
+    "getStarted": "commencer",
+    "startTrial": "essai gratuit",
+    "contactSales": "contacter les ventes",
+    "startServerless": "démarrer serverless"
+  },
+  "footer": {
+    "product": "produit",
+    "company": "entreprise",
+    "trustSecurity": "confiance et sécurité",
+    "support": "support",
+    "legal": "légal",
+    "trust": "confiance",
+    "vulnerabilities": "vulnérabilités",
+    "contactUs": "nous contacter",
+    "customerPortal": "portail client",
+    "status": "statut",
+    "customerSupport": "support client",
+    "trademark": "marque déposée",
+    "sla": "sla",
+    "terms": "conditions",
+    "privacy": "confidentialité",
+    "legalNotice": "mentions légales"
+  }
+}

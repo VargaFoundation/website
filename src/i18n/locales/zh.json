@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "platform": "平台",
+    "product": "产品",
+    "company": "公司",
+    "pricing": "定价",
+    "docs": "文档",
+    "github": "github",
+    "features": "功能",
+    "examples": "示例",
+    "about": "关于",
+    "blog": "博客",
+    "careers": "招聘"
+  },
+  "pricing": {
+    "title": "定价",
+    "subtitle": "免费开始。按需扩展。\n无隐藏费用。随时取消。",
+    "monthly": "月付",
+    "yearly": "年付",
+    "save": "节省17%",
+    "community": "社区版",
+    "serverless": "无服务器",
+    "dedicated": "专用版",
+    "enterprise": "企业版",
+    "mostPopular": "最受欢迎",
+    "getStarted": "开始使用",
+    "startTrial": "免费试用",
+    "contactSales": "联系销售",
+    "startServerless": "开始无服务器"
+  },
+  "footer": {
+    "product": "产品",
+    "company": "公司",
+    "trustSecurity": "信任与安全",
+    "support": "支持",
+    "legal": "法律",
+    "trust": "信任",
+    "vulnerabilities": "漏洞",
+    "contactUs": "联系我们",
+    "customerPortal": "客户门户",
+    "status": "状态",
+    "customerSupport": "客户支持",
+    "trademark": "商标",
+    "sla": "服务等级协议",
+    "terms": "条款",
+    "privacy": "隐私",
+    "legalNotice": "法律声明"
+  }
+}

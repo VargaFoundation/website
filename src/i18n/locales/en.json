@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "platform": "platform",
+    "product": "product",
+    "company": "company",
+    "pricing": "pricing",
+    "docs": "docs",
+    "github": "github",
+    "features": "features",
+    "examples": "examples",
+    "about": "about",
+    "blog": "blog",
+    "careers": "careers"
+  },
+  "pricing": {
+    "title": "pricing",
+    "subtitle": "start free. scale as you grow.\nno hidden fees. cancel anytime.",
+    "monthly": "monthly",
+    "yearly": "yearly",
+    "save": "save 17%",
+    "community": "community",
+    "serverless": "serverless",
+    "dedicated": "dedicated",
+    "enterprise": "enterprise",
+    "mostPopular": "most popular",
+    "getStarted": "get started",
+    "startTrial": "start free trial",
+    "contactSales": "contact sales",
+    "startServerless": "start serverless"
+  },
+  "footer": {
+    "product": "product",
+    "company": "company",
+    "trustSecurity": "trust & security",
+    "support": "support",
+    "legal": "legal",
+    "trust": "trust",
+    "vulnerabilities": "vulnerabilities",
+    "contactUs": "contact us",
+    "customerPortal": "customer portal",
+    "status": "status",
+    "customerSupport": "customer support",
+    "trademark": "trademark",
+    "sla": "sla",
+    "terms": "terms",
+    "privacy": "privacy",
+    "legalNotice": "legal notice"
+  }
+}
