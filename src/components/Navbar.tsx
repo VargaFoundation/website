@@ -94,9 +94,9 @@ export function Navbar() {
                         <div className="space-y-3 ml-6">
                           {/* Parcourir les projets de cette catégorie */}
                           {projects.map((project) => (
-                              <a
+                              <Link
                                   key={project.name}
-                                  href={`/projects/${project.name.toLowerCase()}`}
+                                  to={`/projects/${project.name.toLowerCase()}`}
                                   className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
                               >
                                 <div className="flex items-center">
@@ -112,7 +112,7 @@ export function Navbar() {
                                     </div>
                                   </div>
                                 </div>
-                              </a>
+                              </Link>
                           ))}
                         </div>
                       </div>
@@ -120,8 +120,8 @@ export function Navbar() {
 
                   {/* Lien vers tous les projets */}
                   <div>
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className="group flex items-start hover:bg-gray-50 transition-colors"
                     >
                       <div>
@@ -129,7 +129,7 @@ export function Navbar() {
                           tous les projets
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -250,8 +250,8 @@ export function Navbar() {
               >
                 <div className="p-6">
                   <div className="space-y-4">
-                    <a
-                      href="/mission"
+                    <Link
+                      to="/mission"
                       className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
                       onClick={closeAllMenus}
                     >
@@ -260,10 +260,10 @@ export function Navbar() {
                         <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">mission</div>
                         <div className="text-sm text-gray-600 font-mono">notre vision et objectifs</div>
                       </div>
-                    </a>
+                    </Link>
                     
-                    <a
-                      href="mailto:join@varga.foundation"
+                    <Link
+                      to="/join"
                       className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
                       onClick={closeAllMenus}
                     >
@@ -272,7 +272,7 @@ export function Navbar() {
                         <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">rejoindre</div>
                         <div className="text-sm text-gray-600 font-mono">devenir membre</div>
                       </div>
-                    </a>
+                    </Link>
                     
                     {/*<Link*/}
                     {/*  to="/blog"*/}

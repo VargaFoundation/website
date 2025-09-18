@@ -2,7 +2,7 @@
   "nav": {
     "platform": "plateforme",
     "product": "produit",
-    "company": "entreprise",
+    "company": "fondation",
     "pricing": "tarifs",
     "docs": "docs",
     "github": "github",
@@ -21,7 +21,7 @@
     "community": "communauté",
     "serverless": "serverless",
     "dedicated": "dédié",
-    "enterprise": "entreprise",
+    "enterprise": "fondation",
     "mostPopular": "le plus populaire",
     "getStarted": "commencer",
     "startTrial": "essai gratuit",
@@ -30,7 +30,7 @@
   },
   "footer": {
     "product": "produit",
-    "company": "entreprise",
+    "company": "fondation",
     "trustSecurity": "confiance et sécurité",
     "support": "support",
     "legal": "légal",

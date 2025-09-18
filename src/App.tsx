@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import {Layout} from './components/Layout';
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -25,7 +25,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Layout>
                 <ScrollToTop/>
                 <Routes>
@@ -51,7 +51,7 @@ function App() {
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </Layout>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
