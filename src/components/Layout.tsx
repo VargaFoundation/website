@@ -98,6 +98,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link to="/privacy-policy" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.privacy')}</Link></li>
                 <li><Link to="/legal-notice" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.legalNotice')}</Link></li>
                 <li><Link to="/trademark" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.trademark')}</Link></li>
+                <li><Link to="/rapports" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">rapports</Link></li>
+                <li><Link to="/reglement-interieur" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">règlement intérieur</Link></li>
               </ul>
             </div>
           </div>
