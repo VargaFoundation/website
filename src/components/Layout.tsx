@@ -73,7 +73,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-mono font-bold text-black mb-6">{t('footer.company')}</h4>
               <ul className="space-y-4">
                 <li><Link to="/about" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('nav.about')}</Link></li>
-                <li><Link to="/blog" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('nav.blog')}</Link></li>
+                {/*<li><Link to="/blog" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('nav.blog')}</Link></li>*/}
                 <li><Link to="/join" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">rejoindre</Link></li>
               </ul>
             </div>

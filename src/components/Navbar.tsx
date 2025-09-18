@@ -98,6 +98,7 @@ export function Navbar() {
                                   key={project.name}
                                   to={`/projects/${project.name.toLowerCase()}`}
                                   className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
+                                  onClick={closeAllMenus}
                               >
                                 <div className="flex items-center">
                                   <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-3">
@@ -123,6 +124,7 @@ export function Navbar() {
                     <Link
                         to="/projects"
                         className="group flex items-start hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
                     >
                       <div>
                         <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">

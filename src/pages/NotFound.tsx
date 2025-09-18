@@ -73,15 +73,15 @@ export default function NotFound() {
             
             <div className="grid md:grid-cols-2 gap-4">
               <Link 
-                to="/features" 
+                to="/projects"
                 className="flex items-center p-4 bg-white border border-gray-200 hover:border-black transition-colors"
               >
                 <div className="w-6 h-6 bg-gray-200 flex items-center justify-center mr-3 font-mono text-xs">
                   01
                 </div>
                 <div className="text-left">
-                  <div className="font-mono font-bold text-black text-sm">features</div>
-                  <div className="text-xs text-gray-600 font-mono">platform capabilities</div>
+                  <div className="font-mono font-bold text-black text-sm">projets</div>
+                  <div className="text-xs text-gray-600 font-mono">tous nos projets</div>
                 </div>
               </Link>
 

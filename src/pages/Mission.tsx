@@ -30,25 +30,25 @@ export default function Mission() {
     {
       title: "démocratiser l'accès",
       description: "rendre les outils data et ia utilisables par tous",
-      progress: 75,
+      progress: 1,
       metrics: "5000+ utilisateurs actifs"
     },
     {
       title: "éduquer et former",
       description: "proposer des ressources d'apprentissage gratuites",
-      progress: 60,
+      progress: 1,
       metrics: "200+ tutoriels disponibles"
     },
     {
       title: "innover ensemble",
       description: "développer des solutions innovantes en communauté",
-      progress: 85,
+      progress: 5,
       metrics: "50+ projets actifs"
     },
     {
       title: "promouvoir l'éthique",
       description: "établir des standards éthiques pour l'ia",
-      progress: 40,
+      progress: 1,
       metrics: "framework éthique en développement"
     }
   ]
