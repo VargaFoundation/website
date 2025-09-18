@@ -44,11 +44,11 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-              <a href="https://github.com/vargafoundation" target="_blank" rel="noopener noreferrer">
+              <Link to="/projects">
                 <Button className="btn-primary px-8 py-4 text-base font-mono">
                   découvrir nos projets
                 </Button>
-              </a>
+              </Link>
               
               <Link to="/contribute">
                 <Button className="btn-secondary px-8 py-4 text-base font-mono">
