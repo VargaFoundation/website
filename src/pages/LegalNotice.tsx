@@ -24,12 +24,12 @@ export default function LegalNotice() {
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">1. publisher</h2>
               <div className="bg-gray-50 p-6 mb-8">
                 <p className="text-gray-700 mb-4">
-                  <strong className="text-black">company:</strong> varga.foundation sas<br />
-                  <strong className="text-black">capital:</strong> €10,000<br />
-                  <strong className="text-black">registration:</strong> paris b 123 456 789<br />
-                  <strong className="text-black">address:</strong> 1 rue de rivoli, 75001 paris, france<br />
-                  <strong className="text-black">director:</strong> alex chen<br />
-                  <strong className="text-black">contact:</strong> legal@varga.foundation
+                  <strong className="text-black">association:</strong> Varga Foundation<br />
+                  <strong className="text-black">forme:</strong> Association déclarée<br />
+                  <strong className="text-black">waldec:</strong> W784011864<br />
+                  <strong className="text-black">address:</strong> 2 rue Vauban, 78000 Versailles, France<br />
+                  <strong className="text-black">président:</strong> Vincent Devillers<br />
+                  <strong className="text-black">contact:</strong> contact@varga.foundation
                 </p>
               </div>
 
@@ -44,9 +44,8 @@ export default function LegalNotice() {
 
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">3. intellectual property</h2>
               <p className="text-gray-700 mb-8">
-                varga.foundation is released under the apache 2.0 license. 
-                the source code is available on github. 
-                all documentation and website content is protected by copyright.
+                Varga Foundation assures that all website content is protected by copyright.
+                Source code may be available under the Apache 2.0 license if specified.
               </p>
 
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">4. data protection</h2>

@@ -1,139 +1,40 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
+import projects from "@/data/projects";
 import { Database, Brain, Shield, BarChart, Code, Users, Github, ExternalLink, Star, GitBranch, Download, Eye } from "lucide-react"
+import {useState} from "react";
 
 export default function Projects() {
-  const featuredProjects = [
-    {
-      name: "DataFlow",
-      description: "plateforme de traitement de données en temps réel",
-      category: "data processing",
-      language: "Python",
-      stars: 2400,
-      forks: 340,
-      contributors: 45,
-      lastUpdate: "2024-01-15",
-      status: "stable",
-      icon: Database,
-      features: [
-        "traitement en temps réel",
-        "scalabilité automatique",
-        "interface graphique intuitive",
-        "connecteurs multiples"
-      ],
-      github: "https://github.com/vargafoundation/dataflow",
-      demo: "https://demo.dataflow.odf.org",
-      docs: "https://docs.dataflow.odf.org"
-    },
-    {
-      name: "MLOps",
-      description: "déploiement et gestion de modèles machine learning",
-      category: "machine learning",
-      language: "Python",
-      stars: 1800,
-      forks: 220,
-      contributors: 32,
-      lastUpdate: "2024-01-12",
-      status: "stable",
-      icon: Brain,
-      features: [
-        "déploiement automatisé",
-        "monitoring des modèles",
-        "versioning des modèles",
-        "a/b testing intégré"
-      ],
-      github: "https://github.com/vargafoundation/mlops",
-      demo: "https://demo.mlops.odf.org",
-      docs: "https://docs.mlops.odf.org"
-    },
-    {
-      name: "DataGovernance",
-      description: "outils de gouvernance et qualité des données",
-      category: "governance",
-      language: "Java",
-      stars: 1200,
-      forks: 180,
-      contributors: 28,
-      lastUpdate: "2024-01-10",
-      status: "beta",
-      icon: Shield,
-      features: [
-        "catalogage automatique",
-        "lignage des données",
-        "contrôle qualité",
-        "conformité rgpd"
-      ],
-      github: "https://github.com/vargafoundation/governance",
-      demo: "https://demo.governance.odf.org",
-      docs: "https://docs.governance.odf.org"
-    }
-  ]
+  // État pour stocker la catégorie sélectionnée
+  const [selectedCategory, setSelectedCategory] = useState("tous");
 
-  const allProjects = [
-    {
-      name: "DataLake",
-      description: "solution de stockage de données massives",
-      category: "storage",
-      language: "Scala",
-      stars: 950,
-      status: "stable",
-      icon: Database
-    },
-    {
-      name: "AutoML",
-      description: "automatisation de la création de modèles ml",
-      category: "machine learning",
-      language: "Python",
-      stars: 1400,
-      status: "stable",
-      icon: Brain
-    },
-    {
-      name: "DataViz",
-      description: "outils de visualisation de données",
-      category: "visualization",
-      language: "JavaScript",
-      stars: 800,
-      status: "beta",
-      icon: BarChart
-    },
-    {
-      name: "EthicalAI",
-      description: "framework pour une ia éthique et responsable",
-      category: "ethics",
-      language: "Python",
-      stars: 650,
-      status: "alpha",
-      icon: Shield
-    },
-    {
-      name: "OpenAPI",
-      description: "apis ouvertes pour l'accès aux données publiques",
-      category: "api",
-      language: "Node.js",
-      stars: 720,
-      status: "stable",
-      icon: Code
-    },
-    {
-      name: "Community",
-      description: "plateforme collaborative pour la communauté",
-      category: "community",
-      language: "React",
-      stars: 480,
-      status: "beta",
-      icon: Users
-    }
-  ]
+  // Fonction pour filtrer les projets en fonction de la catégorie sélectionnée
+  const filteredProjects =
+      selectedCategory === "tous"
+          ? projects
+          : projects.filter((project) => project.category === selectedCategory);
 
-  const categories = [
-    { name: "tous", count: featuredProjects.length + allProjects.length },
-    { name: "data processing", count: 2 },
-    { name: "machine learning", count: 2 },
-    { name: "governance", count: 2 },
-    { name: "visualization", count: 1 },
-    { name: "ethics", count: 1 }
-  ]
+  const calculateCategories = (projects) => {
+    const categoryCount = {};
+
+    projects.forEach((project) => {
+      if (categoryCount[project.category]) {
+        categoryCount[project.category]++;
+      } else {
+        categoryCount[project.category] = 1;
+      }
+    });
+
+    const categories = Object.keys(categoryCount).map((category) => ({
+      name: category,
+      count: categoryCount[category],
+    }));
+
+    return [{ name: "tous", count: projects.length }, ...categories];
+  };
+
+// Calcul des catégories avant l'export du composant
+  const categories = calculateCategories(projects);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -192,7 +93,7 @@ export default function Projects() {
             </div>
             
             <div className="space-y-8">
-              {featuredProjects.map((project, index) => (
+              {projects.filter(project => project.featured).map((project, index) => (
                 <div key={index} className="bg-white border border-gray-200 p-8">
                   <div className="grid lg:grid-cols-3 gap-8">
                     <div>
@@ -295,10 +196,11 @@ export default function Projects() {
               {categories.map((category, index) => (
                 <button
                   key={index}
+                  onClick={() => setSelectedCategory(category.name)}
                   className={`px-4 py-2 font-mono text-sm border transition-colors ${
-                    index === 0 
-                      ? 'bg-black text-white border-black' 
-                      : 'bg-white text-gray-700 border-gray-300 hover:border-black hover:text-black'
+                      selectedCategory === category.name
+                          ? "bg-black text-white border-black"
+                          : "bg-white text-gray-700 border-gray-300 hover:border-black hover:text-black"
                   }`}
                 >
                   {category.name} ({category.count})
@@ -307,7 +209,7 @@ export default function Projects() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allProjects.map((project, index) => (
+              {filteredProjects.map((project, index) => (
                 <div key={index} className="bg-gray-50 border border-gray-200 p-6 hover:border-black transition-colors">
                   <div className="flex items-center mb-4">
                     <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-3">

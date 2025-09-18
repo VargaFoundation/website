@@ -6,7 +6,7 @@ import { AnimatedCounter } from "@/components/AnimatedCounter"
 export default function About() {
   const teamMembers = [
     {
-      name: "alex.chen",
+      name: "vincent.devillers",
       role: "ceo & founder",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
       bio: "15 years building data infrastructure. former google, netflix.",
@@ -64,27 +64,27 @@ export default function About() {
 
   const milestones = [
     {
-      year: "2020",
+      year: "2025",
       title: "founded",
-      description: "started as internal tool at dataflow.inc"
+      description: "started as internal tool at layer4"
     },
     {
-      year: "2021",
+      year: "2025",
       title: "open sourced",
       description: "released under apache 2.0 license"
     },
     {
-      year: "2022",
+      year: "2026",
       title: "1k+ users",
       description: "adopted by major tech companies"
     },
     {
-      year: "2023",
+      year: "2026",
       title: "v2.0 release",
       description: "complete rewrite. kubernetes native."
     },
     {
-      year: "2024",
+      year: "2027",
       title: "enterprise ready",
       description: "production deployments at scale"
     }
@@ -99,7 +99,7 @@ export default function About() {
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1 border border-gray-300 text-gray-700 text-sm font-mono mb-12">
               <div className="w-1 h-1 bg-black mr-2"></div>
-              founded 2020 • paris, france
+              founded 2025 • paris, france
             </div>
 
             <h1 className="text-6xl md:text-7xl text-display mb-12 text-black leading-none">
@@ -126,7 +126,7 @@ export default function About() {
                 <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">
                   <AnimatedCounter end={50} suffix="+" />
                 </div>
-                <div className="text-gray-600 font-mono text-sm">companies</div>
+                <div className="text-gray-600 font-mono text-sm">companies using our prodcuts</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">

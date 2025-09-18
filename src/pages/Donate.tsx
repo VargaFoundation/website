@@ -61,22 +61,16 @@ export default function Donate() {
 
   const corporateSponsors = [
     {
-      name: "TechCorp",
-      logo: "TC",
-      tier: "platine",
-      contribution: "50 000€/an"
-    },
-    {
-      name: "DataInc",
-      logo: "DI",
-      tier: "or",
-      contribution: "25 000€/an"
-    },
-    {
-      name: "AIStartup",
-      logo: "AS",
+      name: "LAYER4",
+      logo: "L4",
       tier: "argent",
-      contribution: "10 000€/an"
+      contribution: "1 000€/an"
+    },
+    {
+      name: "ackware",
+      logo: "AW",
+      tier: "argent",
+      contribution: "1 000€/an"
     }
   ]
 
@@ -107,15 +101,15 @@ export default function Donate() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">1200+</div>
-                <div className="text-gray-600 font-mono text-sm">donateurs</div>
+                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">12+</div>
+                <div className="text-gray-600 font-mono text-sm">donateurs en 2025 (prévisionnel)</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">€180k</div>
-                <div className="text-gray-600 font-mono text-sm">collectés en 2024</div>
+                <div className="text-gray-600 font-mono text-sm">collectés en 2025 (prévisionnel)</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">50+</div>
+                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">5+</div>
                 <div className="text-gray-600 font-mono text-sm">projets financés</div>
               </div>
               <div className="text-center">

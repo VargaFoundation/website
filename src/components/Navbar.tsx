@@ -4,12 +4,26 @@ import { useState, useEffect } from "react"
 import { Menu, X, ChevronDown, Database, BarChart, BookOpen, Users, Globe, Target, Github, ExternalLink, Cloud, Server, Shield, Building, Code, Heart, Brain } from "lucide-react"
 import { LanguageSelector } from "./LanguageSelector"
 import { useTranslation } from "react-i18next"
+import projects from "@/data/projects";
+
 
 export function Navbar() {
   const { t } = useTranslation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const location = useLocation()
+
+  // Regrouper les projets "featured" par catégorie
+  const featuredProjectsByCategory = projects
+      .filter((project) => project.featured) // Filtrer uniquement les projets "featured"
+      .reduce((acc, project) => {
+        if (!acc[project.category]) {
+          acc[project.category] = [];
+        }
+
+        acc[project.category].push(project);
+        return acc;
+      }, {});
 
   const isActive = (path: string) => location.pathname === path
 
@@ -70,91 +84,55 @@ export function Navbar() {
                 onMouseLeave={handleDropdownLeave}
               >
                 <div className="p-6">
-                  {/* Data Projects Section */}
-                  <div className="mb-6">
-                    <h4 className="font-mono font-bold text-black mb-4 text-sm flex items-center">
-                      <Database className="w-4 h-4 mr-2" />
-                      solutions data
-                    </h4>
-                    <div className="space-y-3 ml-6">
-                      <a
-                        href="/projects/dataflow"
-                        className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <div>
-                          <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">dataflow</div>
-                          <div className="text-xs text-gray-600 font-mono">plateforme de traitement de données en temps réel</div>
-                        </div>
-                      </a>
-                      
-                      <a
-                        href="/projects/datalake"
-                        className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <div>
-                          <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">datalake</div>
-                          <div className="text-xs text-gray-600 font-mono">stockage et gestion de données massives</div>
-                        </div>
-                      </a>
+                  {/* Parcourir chaque catégorie */}
+                  {Object.entries(featuredProjectsByCategory).map(([category, projects]) => (
+                      <div className="mb-6" key={category}>
+                        <h4 className="font-mono font-bold text-black mb-4 text-sm flex items-center">
+                          {category}
+                        </h4>
 
-                      <a
-                        href="/projects/governance"
-                        className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <div>
-                          <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">governance</div>
-                          <div className="text-xs text-gray-600 font-mono">outils de gouvernance et qualité des données</div>
+                        <div className="space-y-3 ml-6">
+                          {/* Parcourir les projets de cette catégorie */}
+                          {projects.map((project) => (
+                              <a
+                                  key={project.name}
+                                  href={`/projects/${project.name.toLowerCase()}`}
+                                  className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
+                              >
+                                <div className="flex items-center">
+                                  <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-3">
+                                    <project.icon className="w-4 h-4" />
+                                  </div>
+                                  <div>
+                                    <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">
+                                      {project.name}
+                                    </div>
+                                    <div className="text-xs text-gray-600 font-mono">
+                                      {project.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                          ))}
                         </div>
-                      </a>
-                    </div>
-                  </div>
+                      </div>
+                  ))}
 
-                  {/* AI Projects Section */}
-                  <div className="mb-6">
-                    <h4 className="font-mono font-bold text-black mb-4 text-sm flex items-center">
-                      <Brain className="w-4 h-4 mr-2" />
-                      solutions ia
-                    </h4>
-                    <div className="space-y-3 ml-6">
-                      <a
-                        href="/projects/mlops"
-                        className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <div>
-                          <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">mlops</div>
-                          <div className="text-xs text-gray-600 font-mono">plateforme de déploiement et gestion de modèles ml</div>
-                        </div>
-                      </a>
-                      
-                      <a
-                        href="/projects/automl"
-                        className="group flex items-start p-2 hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <div>
-                          <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">automl</div>
-                          <div className="text-xs text-gray-600 font-mono">automatisation de la création de modèles ml</div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
+                  {/* Lien vers tous les projets */}
                   <div>
                     <a
                         href="/projects"
                         className="group flex items-start hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}
                     >
                       <div>
-                      <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">tous les projets</div>
-                    </div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">
+                          tous les projets
+                        </div>
+                      </div>
                     </a>
                   </div>
                 </div>
+
               </div>
             </div>
 

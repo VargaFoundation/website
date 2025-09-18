@@ -22,29 +22,12 @@ export default function Contact() {
 
   const offices = [
     {
-      city: "paris",
+      city: "versailles",
       country: "france",
-      address: "1 rue de rivoli\n75001 paris, france",
-      phone: "+33 1 23 45 67 89",
-      email: "paris@varga.foundation",
+      address: "2 rue vauban\n78000 versailles, france",
+      email: "contact@varga.foundation",
       timezone: "cet (utc+1)"
     },
-    {
-      city: "san francisco",
-      country: "usa",
-      address: "123 market street\nsan francisco, ca 94105",
-      phone: "+1 (555) 123-4567",
-      email: "sf@varga.foundation",
-      timezone: "pst (utc-8)"
-    },
-    {
-      city: "singapore",
-      country: "singapore",
-      address: "1 raffles place\nsingapore 048616",
-      phone: "+65 6123 4567",
-      email: "singapore@varga.foundation",
-      timezone: "sgt (utc+8)"
-    }
   ]
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -308,10 +291,10 @@ export default function Contact() {
                       <div className="text-black whitespace-pre-line">{office.address}</div>
                     </div>
                     
-                    <div>
-                      <div className="text-gray-600 mb-1">phone:</div>
-                      <div className="text-black">{office.phone}</div>
-                    </div>
+                    {/*<div>*/}
+                    {/*  <div className="text-gray-600 mb-1">phone:</div>*/}
+                    {/*  <div className="text-black">{office.phone}</div>*/}
+                    {/*</div>*/}
                     
                     <div>
                       <div className="text-gray-600 mb-1">email:</div>

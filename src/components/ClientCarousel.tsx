@@ -7,11 +7,9 @@ export function ClientCarousel() {
     { name: "layer4", logo: "L4" },
     { name: "ackware", logo: "AW" },
     { name: "region acquitaine", logo: "RA" },
+    { name: "CXarbon", logo: "CX" },
     { name: "université de rouen", logo: "UR" },
-    { name: "hopitaux de paris", logo: "HP" },
-    { name: "association.data", logo: "AD" },
-    { name: "startup.sociale", logo: "SS" },
-    { name: "collectif.citoyen", logo: "CC" }
+    { name: "hopitaux de paris", logo: "HP" }
   ]
 
   useEffect(() => {
