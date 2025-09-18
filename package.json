@@ -39,5 +39,5 @@
     "build": "vite build"
   },
   "type": "module",
-  "homepage": "https://vargafoundation.github.io/website"
+  "homepage": "https://varga.foundation"
 }
