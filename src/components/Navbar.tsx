@@ -51,7 +51,7 @@ export function Navbar() {
                 <span className="text-white font-mono font-bold text-xs">V</span>
               </div>
               <span className="text-black font-mono font-bold text-lg">
-                Varga Foundation
+                varga.foundation
               </span>
             </Link>
           </div>

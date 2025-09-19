@@ -24,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <span className="text-white font-mono font-bold text-xs">O</span>
                 </div>
                 <span className="text-black font-mono font-bold text-lg">
-                  Varga Foundation
+                  varga.foundation
                 </span>
               </div>
               <p className="text-gray-600 text-base mb-8 max-w-md font-mono">

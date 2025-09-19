@@ -53,7 +53,7 @@ export default function About() {
     {
       icon: Shield,
       title: "reliable",
-      description: "battle-tested in production. 99.9% uptime guarantee."
+      description: "battle-tested in production."
     },
     {
       icon: Zap,
@@ -115,32 +115,32 @@ export default function About() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">
-                  <AnimatedCounter end={1000} suffix="+" />
-                </div>
-                <div className="text-gray-600 font-mono text-sm">developers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">
-                  <AnimatedCounter end={50} suffix="+" />
-                </div>
-                <div className="text-gray-600 font-mono text-sm">companies using our prodcuts</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">
-                  <AnimatedCounter end={99} suffix="%" />
-                </div>
-                <div className="text-gray-600 font-mono text-sm">uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">
-                  <AnimatedCounter end={4} suffix=" years" />
-                </div>
-                <div className="text-gray-600 font-mono text-sm">in production</div>
-              </div>
-            </div>
+            {/*<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">*/}
+            {/*  <div className="text-center">*/}
+            {/*    <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">*/}
+            {/*      <AnimatedCounter end={1000} suffix="+" />*/}
+            {/*    </div>*/}
+            {/*    <div className="text-gray-600 font-mono text-sm">developers</div>*/}
+            {/*  </div>*/}
+            {/*  <div className="text-center">*/}
+            {/*    <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">*/}
+            {/*      <AnimatedCounter end={50} suffix="+" />*/}
+            {/*    </div>*/}
+            {/*    <div className="text-gray-600 font-mono text-sm">companies using our prodcuts</div>*/}
+            {/*  </div>*/}
+            {/*  <div className="text-center">*/}
+            {/*    <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">*/}
+            {/*      <AnimatedCounter end={99} suffix="%" />*/}
+            {/*    </div>*/}
+            {/*    <div className="text-gray-600 font-mono text-sm">uptime</div>*/}
+            {/*  </div>*/}
+            {/*  <div className="text-center">*/}
+            {/*    <div className="text-3xl md:text-4xl font-mono font-bold text-black mb-2">*/}
+            {/*      <AnimatedCounter end={4} suffix=" years" />*/}
+            {/*    </div>*/}
+            {/*    <div className="text-gray-600 font-mono text-sm">in production</div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
