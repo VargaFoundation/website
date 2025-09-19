@@ -1,44 +1,22 @@
 import { useState, useEffect } from 'react'
 import { X, ArrowRight, ExternalLink } from 'lucide-react'
+import {news} from "@/data/news.tsx";
 
 export function NewsBanner() {
   const [isVisible, setIsVisible] = useState(true)
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const newsItems = [
-    // {
-    //   text: "nouveau projet mlops v3.0 disponible avec support kubernetes natif",
-    //   link: "/blog",
-    //   type: "release"
-    // },
-    {
-      text: "nouvelles fonctionnalités : outils avancés de gouvernance des données",
-      link: "/projects",
-      type: "feature"
-    },
-    {
-      text: "rejoignez-nous au salon open source 2025 - stand #42",
-      link: "#",
-      type: "event"
-    },
-    {
-      text: "programme de financement pour associations et ong - candidatures ouvertes",
-      link: "/donate",
-      type: "offer"
-    }
-  ]
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % newsItems.length)
+      setCurrentIndex((prev) => (prev + 1) % news.length)
     }, 4000)
 
     return () => clearInterval(timer)
-  }, [newsItems.length])
+  }, [news.length])
 
   if (!isVisible) return null
 
-  const currentNews = newsItems[currentIndex]
+  const currentNews = news[currentIndex]
 
   return (
     <div className="bg-black text-white py-2 px-4 relative overflow-hidden z-[60]">
@@ -64,7 +42,7 @@ export function NewsBanner() {
 
         {/* Indicators */}
         <div className="hidden md:flex items-center space-x-2 mx-4">
-          {newsItems.map((_, index) => (
+          {news.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

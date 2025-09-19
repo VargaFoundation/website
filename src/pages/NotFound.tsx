@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { Home, ArrowLeft, Github, Terminal } from "lucide-react"
 import { useEffect } from "react"
+import {info} from "@/data/info.tsx";
 
 export default function NotFound() {
   useEffect(() => {
@@ -138,7 +139,7 @@ export default function NotFound() {
               className="inline-flex items-center text-black hover:text-gray-600 transition-colors font-mono text-sm"
             >
               <Terminal className="h-4 w-4 mr-2" />
-              support@varga.foundation
+              {info.mail.support}
             </a>
           </div>
         </div>

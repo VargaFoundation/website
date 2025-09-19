@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { Code, Building, Shield, FileText, CheckCircle, Mail, Github, Award, Clock, Users, Target, DollarSign, Scale, Eye, Download, ArrowRight, Server, Monitor, Cpu, HardDrive, Cable } from "lucide-react"
 import { useState } from "react"
+import {info} from "@/data/info.tsx";
 
 export default function DonEnNature() {
     const [projectValue, setProjectValue] = useState(50000)
@@ -635,7 +636,7 @@ export default function DonEnNature() {
 
                         <div className="mt-12 pt-8 border-t border-gray-700">
                             <p className="text-gray-400 font-mono text-sm">
-                                mecenat@varga.foundation
+                                {info.mail.mecenat}
                             </p>
                         </div>
                     </div>

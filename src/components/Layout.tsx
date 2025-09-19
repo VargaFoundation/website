@@ -82,6 +82,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-4">
                 <li><Link to="/trust" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.trust')}</Link></li>
                 <li><Link to="/vulnerabilities" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.vulnerabilities')}</Link></li>
+                <li><Link to="/compliance" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">certifications & compliance</Link></li>
               </ul>
             </div>
             <div>

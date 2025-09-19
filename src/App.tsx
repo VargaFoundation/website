@@ -31,6 +31,7 @@ import ReactGA from "react-ga4";
 import MecenatCompetences from "@/pages/MecenatCompetences.tsx";
 import DonEnNature from "@/pages/DonEnNature.tsx";
 import CodeOfConduct from "@/pages/CodeOfConduct.tsx";
+import Compliance from "@/pages/Compliance.tsx";
 
 // Composant pour suivre les changements de page
 function PageTracker() {
@@ -88,6 +89,7 @@ function App() {
                     <Route path="/mecenat-competences" element={<MecenatCompetences />} />
                     <Route path="/don-en-nature" element={<DonEnNature />} />
                     <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+                    <Route path="/compliance" element={<Compliance />} />
                     {/* Route 404 - doit être en dernier */}
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
+import {info} from "@/data/info.tsx";
 
 export default function UseOfData() {
   return (
@@ -105,7 +106,7 @@ export default function UseOfData() {
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">9. contact dpo</h2>
               <p className="text-gray-700 mb-8">
                 data protection officer:<br />
-                email: dpo@varga.foundation<br />
+                email: {info.mail.dpo}<br />
                 address: 1 rue de rivoli, 75001 paris, france<br />
                 response time: 30 days maximum
               </p>

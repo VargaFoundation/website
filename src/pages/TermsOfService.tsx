@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
+import {info} from "@/data/info.tsx";
 
 export default function TermsOfService() {
   return (
@@ -95,7 +96,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">10. contact</h2>
               <p className="text-gray-700 mb-8">
                 questions about these terms?<br />
-                email: legal@varga.foundation<br />
+                email: {info.mail.legal}<br />
                 address: 1 rue de rivoli, 75001 paris, france
               </p>
             </div>

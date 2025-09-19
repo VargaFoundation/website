@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { Users, Building, TrendingUp, Shield, CheckCircle, Mail, FileText, Calculator, Award, Clock, Target, DollarSign, HeartHandshake as Handshake, Star } from "lucide-react"
 import { useState } from "react"
+import {info} from "@/data/info.tsx";
 
 export default function MecenatCompetences() {
     const [simulatorData, setSimulatorData] = useState({
@@ -729,7 +730,7 @@ export default function MecenatCompetences() {
 
                         <div className="mt-12 pt-8 border-t border-gray-700">
                             <p className="text-gray-400 font-mono text-sm">
-                                mecenat@varga.foundation
+                                {info.mail.mecenat}
                             </p>
                         </div>
                     </div>

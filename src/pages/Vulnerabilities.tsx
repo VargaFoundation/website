@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { Shield, AlertTriangle, Mail, Clock, Award, CheckCircle, FileText } from "lucide-react"
+import {info} from "@/data/info.tsx";
 
 export default function Vulnerabilities() {
   const reportingProcess = [
@@ -251,11 +252,11 @@ export default function Vulnerabilities() {
                   <div className="space-y-3 font-mono text-sm">
                     <div className="flex items-center">
                       <Mail className="w-4 h-4 text-gray-600 mr-3" />
-                      <span className="text-gray-700">security@varga.foundation</span>
+                      <span className="text-gray-700">{info.mail.security}</span>
                     </div>
                     <div className="flex items-center">
                       <Shield className="w-4 h-4 text-gray-600 mr-3" />
-                      <span className="text-gray-700">pgp key: 0x1234567890ABCDEF</span>
+                      <span className="text-gray-700">pgp key: {info.security.pgp}</span>
                     </div>
                   </div>
                 </div>

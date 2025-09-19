@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { Shield, AlertTriangle, CheckCircle, FileText, Mail } from "lucide-react"
+import {info} from "@/data/info.tsx";
 
 export default function Trademark() {
   const trademarks = [
@@ -276,7 +277,7 @@ export default function Trademark() {
                     if you believe someone is misusing our trademarks, please contact:
                   </p>
                   <div className="font-mono text-sm">
-                    <div className="mb-2">email: legal@varga.foundation</div>
+                    <div className="mb-2">email: {info.mail.legal}</div>
                     <div>subject: trademark violation report</div>
                   </div>
                 </div>

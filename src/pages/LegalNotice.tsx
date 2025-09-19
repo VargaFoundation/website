@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
+import {info} from "@/data/info.tsx";
 
 export default function LegalNotice() {
   return (
@@ -29,7 +30,7 @@ export default function LegalNotice() {
                   <strong className="text-black">waldec:</strong> W784011864<br />
                   <strong className="text-black">address:</strong> 2 rue Vauban, 78000 Versailles, France<br />
                   <strong className="text-black">président:</strong> Vincent Devillers<br />
-                  <strong className="text-black">contact:</strong> contact@varga.foundation
+                  <strong className="text-black">contact:</strong> {info.mail.contact}
                 </p>
               </div>
 
@@ -52,7 +53,7 @@ export default function LegalNotice() {
               <p className="text-gray-700 mb-8">
                 in accordance with gdpr and french data protection laws, 
                 you have rights regarding your personal data. 
-                contact our dpo at: dpo@varga.foundation
+                contact our dpo at: {info.mail.dpo}
               </p>
 
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">5. cookies</h2>
