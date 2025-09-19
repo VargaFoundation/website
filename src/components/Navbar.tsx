@@ -193,6 +193,20 @@ export function Navbar() {
                       </div>
                     </Link>
 
+                    <Link
+                        to="/code-of-conduct"
+                        className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                    >
+                      <div className="w-6 h-6 bg-gray-200 flex items-center justify-center mr-3 font-mono text-xs">
+                        03
+                      </div>
+                      <div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">code de conduite</div>
+                        <div className="text-sm text-gray-600 font-mono">règles de la communauté</div>
+                      </div>
+                    </Link>
+
                     {/*<Link*/}
                     {/*  to="/testimonials"*/}
                     {/*  className="group flex items-start p-3 hover:bg-gray-50 transition-colors"*/}
@@ -299,6 +313,31 @@ export function Navbar() {
                         <div className="text-sm text-gray-600 font-mono">notre histoire</div>
                       </div>
                     </Link>
+
+                    <Link
+                        to="/mecenat-competences"
+                        className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                    >
+                      <Users className="w-4 h-4 text-gray-600 mr-3 mt-1" />
+                      <div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">mécénat de compétences</div>
+                        <div className="text-sm text-gray-600 font-mono">partenariats entreprises</div>
+                      </div>
+                    </Link>
+
+                    <Link
+                        to="/don-en-nature"
+                        className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                    >
+                      <Code className="w-4 h-4 text-gray-600 mr-3 mt-1" />
+                      <div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">don en nature</div>
+                        <div className="text-sm text-gray-600 font-mono">don de code source, matériels...</div>
+                      </div>
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -400,17 +439,17 @@ export function Navbar() {
             >
               à propos
             </Link>
-            <Link
-              to="/blog"
-              className={`block px-3 py-2 text-sm font-mono transition-colors ${
-                isActive('/blog')
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-black'
-              }`}
-              onClick={closeAllMenus}
-            >
-              blog
-            </Link>
+            {/*<Link*/}
+            {/*  to="/blog"*/}
+            {/*  className={`block px-3 py-2 text-sm font-mono transition-colors ${*/}
+            {/*    isActive('/blog')*/}
+            {/*      ? 'text-blue-600'*/}
+            {/*      : 'text-gray-700 hover:text-black'*/}
+            {/*  }`}*/}
+            {/*  onClick={closeAllMenus}*/}
+            {/*>*/}
+            {/*  blog*/}
+            {/*</Link>*/}
             <Link
               to="/donate"
               className={`block px-3 py-2 text-sm font-mono transition-colors ${

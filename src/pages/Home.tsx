@@ -4,6 +4,7 @@ import { ArrowRight, Database, Zap, BarChart, CheckCircle2, Github, ExternalLink
 import { AnimatedCounter } from "@/components/AnimatedCounter"
 import { ClientCarousel } from "@/components/ClientCarousel"
 import { WorldMap } from "@/components/WorldMap"
+import projects from "@/data/projects.tsx";
 
 export default function Home() {
   return (
@@ -161,34 +162,34 @@ export default function Home() {
                 <p className="text-lg text-gray-600 mb-8 font-mono">
                   solutions opensource pour démocratiser l'accès aux technologies data et ia.
                 </p>
+
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-4 font-mono text-xs flex-shrink-0">
-                      ✓
-                    </div>
-                    <div>
-                      <h4 className="font-mono font-bold text-black mb-1">dataflow</h4>
-                      <p className="text-gray-600 text-sm font-mono">plateforme de traitement de données en temps réel</p>
-                    </div>
+
+                  {projects.filter(project => project.featured).map((project, index) => (
+                      <div className="flex items-start" key={project.id}>
+                        <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-4 font-mono text-xs flex-shrink-0">
+                          ✓
+                        </div>
+                        <div>
+                          <h4 className="font-mono font-bold text-black mb-1">{project.name}</h4>
+                          <p className="text-gray-600 text-sm font-mono">{project.description}</p>
+                        </div>
+                      </div>
+                  ))}
+
+                  <div>
+                    <Link
+                        to="/projects"
+                        className="group flex items-start hover:bg-gray-50 transition-colors"
+                    >
+                      <div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">
+                          voir tous les projets
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-4 font-mono text-xs flex-shrink-0">
-                      ✓
-                    </div>
-                    <div>
-                      <h4 className="font-mono font-bold text-black mb-1">mlops</h4>
-                      <p className="text-gray-600 text-sm font-mono">déploiement et gestion de modèles ml</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-black text-white flex items-center justify-center mr-4 font-mono text-xs flex-shrink-0">
-                      ✓
-                    </div>
-                    <div>
-                      <h4 className="font-mono font-bold text-black mb-1">governance</h4>
-                      <p className="text-gray-600 text-sm font-mono">outils de gouvernance et qualité des données</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>

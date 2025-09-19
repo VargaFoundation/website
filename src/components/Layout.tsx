@@ -89,6 +89,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-4">
                 <li><Link to="/contact" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">{t('footer.contactUs')}</Link></li>
                 <li><a href="https://discord.gg/vargafoundation" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">discord</a></li>
+                <li><Link to="/code-of-conduct" className="text-gray-600 hover:text-black transition-colors font-mono text-sm">code de conduite</Link></li>
+
               </ul>
             </div>
             <div>

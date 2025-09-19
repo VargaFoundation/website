@@ -28,6 +28,9 @@ import ReglementInterieur from "@/pages/ReglementInterieur.tsx";
 import { useEffect, useState } from "react"
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent"
 import ReactGA from "react-ga4";
+import MecenatCompetences from "@/pages/MecenatCompetences.tsx";
+import DonEnNature from "@/pages/DonEnNature.tsx";
+import CodeOfConduct from "@/pages/CodeOfConduct.tsx";
 
 // Composant pour suivre les changements de page
 function PageTracker() {
@@ -82,6 +85,9 @@ function App() {
                     <Route path="/projects/:id" element={<ProjectDetail/>}/>
                     <Route path="/rapports" element={<Rapports />} />
                     <Route path="/reglement-interieur" element={<ReglementInterieur />} />
+                    <Route path="/mecenat-competences" element={<MecenatCompetences />} />
+                    <Route path="/don-en-nature" element={<DonEnNature />} />
+                    <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                     {/* Route 404 - doit être en dernier */}
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
