@@ -36,9 +36,9 @@ export default function LegalNotice() {
               <h2 className="text-2xl font-mono font-bold mb-6 text-black">2. hosting</h2>
               <div className="bg-gray-50 p-6 mb-8">
                 <p className="text-gray-700 mb-4">
-                  <strong className="text-black">provider:</strong> ovh sas<br />
-                  <strong className="text-black">address:</strong> 2 rue kellermann, 59100 roubaix, france<br />
-                  <strong className="text-black">phone:</strong> +33 9 72 10 10 07
+                  <strong className="text-black">provider:</strong> GitHub Pages<br />
+                  <strong className="text-black">address:</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States<br />
+                  <strong className="text-black">website:</strong> <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">https://pages.github.com</a>
                 </p>
               </div>
 
