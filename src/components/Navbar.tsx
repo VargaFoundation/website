@@ -14,8 +14,9 @@ export function Navbar() {
   const location = useLocation()
 
   // Regrouper les projets "featured" par catégorie
-  const featuredProjectsByCategory = projects
-      .filter((project) => project.featured) // Filtrer uniquement les projets "featured"
+  let featuredProjects = projects
+      .filter((project) => project.featured);
+  const featuredProjectsByCategory = featuredProjects // Filtrer uniquement les projets "featured"
       .reduce((acc, project) => {
         if (!acc[project.category]) {
           acc[project.category] = [];
@@ -403,53 +404,91 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-4 space-y-2 border-t border-gray-200 bg-white">
             {/* Projects Mobile Menu */}
             <div className="px-3 py-2">
               <div className="font-mono font-bold text-black text-sm mb-2">projets</div>
               <div className="ml-4 space-y-2">
-                <a href="/projects/dataflow" className="block text-sm font-mono text-gray-600 hover:text-black">dataflow</a>
-                <a href="/projects/datalake" className="block text-sm font-mono text-gray-600 hover:text-black">datalake</a>
-                <a href="/projects/mlops" className="block text-sm font-mono text-gray-600 hover:text-black">mlops</a>
-                <a href="/projects/automl" className="block text-sm font-mono text-gray-600 hover:text-black">automl</a>
+                {featuredProjects.map((project) => (
+                    <Link
+                        key={project.name}
+                        to={`/projects/${project.name.toLowerCase()}`}
+                        className="block text-sm font-mono text-gray-600 hover:text-black"
+                    >
+                      {project.name}
+                    </Link>
+                    ))}
+                <Link
+                    to="/projects"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  tous les projets
+                </Link>
               </div>
             </div>
-            
-            <Link
-              to="/contribute"
-              className={`block px-3 py-2 text-sm font-mono transition-colors ${
-                isActive('/contribute')
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-black'
-              }`}
-              onClick={closeAllMenus}
-            >
-              contribuer
-            </Link>
-            <Link
-              to="/about"
-              className={`block px-3 py-2 text-sm font-mono transition-colors ${
-                isActive('/about')
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-black'
-              }`}
-              onClick={closeAllMenus}
-            >
-              à propos
-            </Link>
-            {/*<Link*/}
-            {/*  to="/blog"*/}
-            {/*  className={`block px-3 py-2 text-sm font-mono transition-colors ${*/}
-            {/*    isActive('/blog')*/}
-            {/*      ? 'text-blue-600'*/}
-            {/*      : 'text-gray-700 hover:text-black'*/}
-            {/*  }`}*/}
-            {/*  onClick={closeAllMenus}*/}
-            {/*>*/}
-            {/*  blog*/}
-            {/*</Link>*/}
+
+            <div className="px-3 py-2">
+              <div className="font-mono font-bold text-black text-sm mb-2">communauté</div>
+              <div className="ml-4 space-y-2">
+                <Link
+                    to="/contribute"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  contribuer
+                </Link>
+                <Link
+                    to="/guide"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  documentation
+                </Link>
+                <Link
+                    to="/code-of-conduct"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  code de conduite
+                </Link>
+              </div>
+            </div>
+
+            <div className="px-3 py-2">
+              <div className="font-mono font-bold text-black text-sm mb-2">fondation</div>
+              <div className="ml-4 space-y-2">
+                <Link
+                    to="/mission"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  mission
+                </Link>
+                <Link
+                    to="/join"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  rejoindre
+                </Link>
+                <Link
+                    to="/about"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  à propos
+                </Link>
+                <Link
+                    to="/mecenat-competences"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  mécénat de compétences
+                </Link>
+                <Link
+                    to="/don-en-nature"
+                    className="block text-sm font-mono text-gray-600 hover:text-black"
+                >
+                  don en nature
+                </Link>
+              </div>
+            </div>
+
             <Link
               to="/donate"
               className={`block px-3 py-2 text-sm font-mono transition-colors ${
@@ -461,32 +500,18 @@ export function Navbar() {
             >
               faire un don
             </Link>
+            <Link
+                to="https://docs.varga.foundation" target="_blank"
+                className={`block px-3 py-2 text-sm font-mono transition-colors ${
+                    isActive('/donate')
+                        ? 'text-blue-600'
+                        : 'text-gray-700 hover:text-black'
+                }`}
+                onClick={closeAllMenus}
+            >
+              docs
+            </Link>
             
-            <div className="pt-4 space-y-3 border-t border-gray-200">
-              <a href="https://docs.varga.foundation" target="_blank" rel="noopener noreferrer">
-                <Button 
-                  variant="ghost" 
-                  className="w-full text-gray-700 hover:text-black justify-start font-mono"
-                >
-                  docs
-                </Button>
-              </a>
-              <Link to="/donate">
-                <Button 
-                  variant="ghost" 
-                  className="w-full text-gray-700 hover:text-black justify-start font-mono"
-                  onClick={closeAllMenus}
-                >
-                  faire un don
-                </Button>
-              </Link>
-              <a href="https://github.com/vargafoundation" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full btn-primary font-mono">
-                  <Github className="mr-2 h-4 w-4" />
-                  github
-                </Button>
-              </a>
-            </div>
           </div>
         </div>
       </div>
