@@ -234,6 +234,82 @@ const projects: Project[] = [
         },
         roadmap: [
         ]
+    },
+    {
+        id: "vorath",
+        name: "vorath",
+        featured: false,
+        description: "un CSI Hadoop permettant à des Pods dans Kubernetesde monter des volumes basés sur HDFS",
+        category: "kubernetes",
+        language: "Java",
+        stars: 1,
+        forks: 0,
+        contributors: 1,
+        lastUpdate: "2025-09-18",
+        status: "beta",
+        icon: Database,
+        features: [
+            "hadoop",
+            "kubernetes"
+        ],
+        github: "https://github.com/vargafoundation/vorath",
+        demo: "https://demo.varga.foundation",
+        docs: "https://docs.varga.foundation",
+        installation: {
+            requirements: [
+                'Java 17+',
+                'Docker',
+                'Kubernetes (optionnel)',
+                '4GB RAM minimum'
+            ],
+            steps: [
+                'git clone https://github.com/vargafoundation/vorath',
+                'cd vorath'
+            ]
+        },
+        usage: {
+            basicExample: ``
+        },
+        roadmap: [
+        ]
+    },
+    {
+        id: "weave",
+        name: "weave",
+        featured: false,
+        description: "un operator Kubernetes permettant de gérer des ressources dans Hadoop (HDFS, YARN...) à partir de CRDs",
+        category: "kubernetes",
+        language: "Java",
+        stars: 1,
+        forks: 0,
+        contributors: 1,
+        lastUpdate: "2025-09-18",
+        status: "beta",
+        icon: Database,
+        features: [
+            "hadoop",
+            "kubernetes"
+        ],
+        github: "https://github.com/vargafoundation/weave",
+        demo: "https://demo.varga.foundation",
+        docs: "https://docs.varga.foundation",
+        installation: {
+            requirements: [
+                'Java 17+',
+                'Docker',
+                'Kubernetes (optionnel)',
+                '4GB RAM minimum'
+            ],
+            steps: [
+                'git clone https://github.com/vargafoundation/weave',
+                'cd weave'
+            ]
+        },
+        usage: {
+            basicExample: ``
+        },
+        roadmap: [
+        ]
     }
 ]
 

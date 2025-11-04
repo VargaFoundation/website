@@ -64,30 +64,35 @@ export default function About() {
 
   const milestones = [
     {
+      year: "2024",
+      title: "based",
+      description: "started as independent modules at layer4"
+    },
+    {
       year: "2025",
       title: "founded",
-      description: "started as internal tool at layer4"
+      description: "founded in public"
     },
     {
       year: "2025",
       title: "open sourced",
-      description: "released under apache 2.0 license"
+      description: "projects released under apache 2.0 license"
     },
-    {
-      year: "2026",
-      title: "1k+ users",
-      description: "adopted by major tech companies"
-    },
-    {
-      year: "2026",
-      title: "v2.0 release",
-      description: "complete rewrite. kubernetes native."
-    },
-    {
-      year: "2027",
-      title: "enterprise ready",
-      description: "production deployments at scale"
-    }
+    // {
+    //   year: "2025",
+    //   title: "1k+ users",
+    //   description: "adopted by major tech companies"
+    // },
+    // {
+    //   year: "2026",
+    //   title: "v2.0 release",
+    //   description: "complete rewrite. kubernetes native."
+    // },
+    // {
+    //   year: "2027",
+    //   title: "enterprise ready",
+    //   description: "production deployments at scale"
+    // }
   ]
 
   return (
