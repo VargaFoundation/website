@@ -47,13 +47,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="group flex items-center space-x-3" onClick={closeAllMenus}>
-              <div className="w-6 h-6 bg-black flex items-center justify-center">
-                <span className="text-white font-mono font-bold text-xs">V</span>
-              </div>
-              <span className="text-black font-mono font-bold text-lg">
-                varga.foundation
-              </span>
+            <Link to="/" className="group flex items-center" onClick={closeAllMenus}>
+              <img
+                src="/Image1.png"
+                alt="varga.foundation logo"
+                className="h-16 w-auto block"
+                style={{ marginTop: '8px'}}
+              />
             </Link>
           </div>
 
