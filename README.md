@@ -5,7 +5,7 @@ https://varga.foundation
 
  nvm use 20
  npm install
- npm run devd
+ npm run dev
  
 ## deploy
 
