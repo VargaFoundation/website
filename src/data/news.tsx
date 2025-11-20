@@ -6,7 +6,7 @@ export const news = [
     // },
     {
         text: "nouvelles fonctionnalités : outils avancés de gouvernance des données",
-        link: "/projects",
+        link: "/#/projects",
         type: "feature"
     },
     {
@@ -16,7 +16,7 @@ export const news = [
     },
     {
         text: "programme de financement pour associations et ong - candidatures ouvertes",
-        link: "/donate",
+        link: "/#/donate",
         type: "offer"
     }
 ]
