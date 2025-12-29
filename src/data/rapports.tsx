@@ -17,7 +17,7 @@ export const rapportsActivite = [
 export const rapportsFinanciers = [
     {
         year: "2025",
-        title: "rapport financier 2023",
+        title: "rapport financier 2025",
         description: "comptes annuels certifiés et utilisation des fonds",
         budget: "€285,000",
         highlights: [

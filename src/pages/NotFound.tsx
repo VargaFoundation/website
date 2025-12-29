@@ -1,22 +1,25 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
-import { Home, ArrowLeft, Github, Terminal } from "lucide-react"
+import { Home as HomeIcon, ArrowLeft, Terminal } from "lucide-react"
 import { useEffect } from "react"
-import {info} from "@/data/info.tsx";
+import { info } from "@/data/info.tsx"
+import { useTranslation } from 'react-i18next'
 
 export default function NotFound() {
+  const { t } = useTranslation()
+
   useEffect(() => {
-    document.title = "404 - Page not found | varga.foundation"
-    
+    document.title = `404 - ${t('pages.notFound.title')} | varga.foundation`
+
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Page not found. Return to varga.foundation homepage to discover our universal data platform.')
+      metaDescription.setAttribute('content', t('pages.notFound.text1') as string)
     }
 
     return () => {
       document.title = "varga.foundation - Plateforme opensource de données universelle"
     }
-  }, [])
+  }, [t])
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
@@ -25,7 +28,7 @@ export default function NotFound() {
           {/* Error badge */}
           <div className="inline-flex items-center px-3 py-1 border border-gray-300 text-gray-700 text-sm font-mono mb-12">
             <div className="w-1 h-1 bg-black mr-2"></div>
-            http error
+            {t('pages.notFound.badge')}
           </div>
 
           {/* 404 Number */}
@@ -38,13 +41,13 @@ export default function NotFound() {
           {/* Error Message */}
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl text-display mb-6 text-black">
-              page not found
+              {t('pages.notFound.title')}
             </h2>
             <p className="text-lg text-gray-600 mb-6 font-mono">
-              the requested resource does not exist.
+              {t('pages.notFound.text1')}
             </p>
             <p className="text-gray-500 font-mono text-sm">
-              check the url or navigate back to safety.
+              {t('pages.notFound.text2')}
             </p>
           </div>
 
@@ -52,8 +55,8 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/">
               <Button className="btn-primary px-6 py-3 font-mono">
-                <Home className="mr-2 h-4 w-4" />
-                home
+                <HomeIcon className="mr-2 h-4 w-4" />
+                {t('pages.notFound.home')}
               </Button>
             </Link>
             
@@ -62,14 +65,14 @@ export default function NotFound() {
               className="btn-secondary px-6 py-3 font-mono"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              back
+              {t('common.actions.back')}
             </Button>
           </div>
 
           {/* Helpful Links */}
           <div className="bg-gray-50 border border-gray-200 p-8">
             <h3 className="text-lg font-mono font-bold text-black mb-6">
-              popular pages
+              {t('pages.notFound.popularPages')}
             </h3>
             
             <div className="grid md:grid-cols-2 gap-4">
@@ -81,8 +84,8 @@ export default function NotFound() {
                   01
                 </div>
                 <div className="text-left">
-                  <div className="font-mono font-bold text-black text-sm">projets</div>
-                  <div className="text-xs text-gray-600 font-mono">tous nos projets</div>
+                  <div className="font-mono font-bold text-black text-sm">{t('nav.projects')}</div>
+                  <div className="text-xs text-gray-600 font-mono">{t('pages.projects.all')}</div>
                 </div>
               </Link>
 
@@ -94,23 +97,10 @@ export default function NotFound() {
                   02
                 </div>
                 <div className="text-left">
-                  <div className="font-mono font-bold text-black text-sm">documentation</div>
-                  <div className="text-xs text-gray-600 font-mono">complete guides</div>
+                  <div className="font-mono font-bold text-black text-sm">{t('nav.docs')}</div>
+                  <div className="text-xs text-gray-600 font-mono">{t('pages.notFound.completeGuides')}</div>
                 </div>
               </Link>
-
-              {/*<Link */}
-              {/*  to="/testimonials" */}
-              {/*  className="flex items-center p-4 bg-white border border-gray-200 hover:border-black transition-colors"*/}
-              {/*>*/}
-              {/*  <div className="w-6 h-6 bg-gray-200 flex items-center justify-center mr-3 font-mono text-xs">*/}
-              {/*    03*/}
-              {/*  </div>*/}
-              {/*  <div className="text-left">*/}
-              {/*    <div className="font-mono font-bold text-black text-sm">testimonials</div>*/}
-              {/*    <div className="text-xs text-gray-600 font-mono">user stories</div>*/}
-              {/*  </div>*/}
-              {/*</Link>*/}
 
               <a
                 href="https://github.com/vargafoundation"
@@ -122,8 +112,8 @@ export default function NotFound() {
                   04
                 </div>
                 <div className="text-left">
-                  <div className="font-mono font-bold text-black text-sm">github</div>
-                  <div className="text-xs text-gray-600 font-mono">source code</div>
+                  <div className="font-mono font-bold text-black text-sm">{t('nav.github')}</div>
+                  <div className="text-xs text-gray-600 font-mono">{t('pages.notFound.sourceCode')}</div>
                 </div>
               </a>
             </div>
@@ -132,10 +122,10 @@ export default function NotFound() {
           {/* Contact Support */}
           <div className="mt-12 text-center">
             <p className="text-gray-500 mb-4 font-mono text-sm">
-              still lost? our team can help.
+              {t('pages.notFound.stillLost')}
             </p>
             <a 
-              href="mailto:support@varga.foundation"
+              href={`mailto:${info.mail.support}`}
               className="inline-flex items-center text-black hover:text-gray-600 transition-colors font-mono text-sm"
             >
               <Terminal className="h-4 w-4 mr-2" />

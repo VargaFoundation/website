@@ -6,11 +6,53 @@
     "pricing": "tarifs",
     "docs": "docs",
     "github": "github",
+    "projects": "projets",
+    "community": "communauté",
+    "contribute": "contribuer",
+    "guide": "guide",
+    "allProjects": "tous les projets",
+    "donate": "faire un don",
+    "codeOfConduct": "code de conduite",
+    "mission": "mission",
+    "join": "rejoindre",
+    "mecenatCompetences": "mécénat de compétences",
+    "donEnNature": "don en nature",
     "features": "fonctionnalités",
     "examples": "exemples",
     "about": "à propos",
     "blog": "blog",
     "careers": "carrières"
+  },
+  "common": {
+    "actions": {
+      "viewOnGithub": "voir sur github",
+      "contribute": "contribuer",
+      "backToHome": "retour à l'accueil",
+      "backToProjects": "retour aux projets",
+      "join": "rejoindre",
+      "back": "retour"
+    },
+    "metrics": {
+      "stars": "stars",
+      "forks": "forks",
+      "contributors": "contributeurs"
+    },
+    "labels": {
+      "links": "liens",
+      "features": "fonctionnalités",
+      "overview": "aperçu",
+      "projects": "projets",
+      "lastUpdate": "dernière maj",
+      "language": "langage",
+      "stats": "statistiques"
+    },
+    "status": {
+      "stable": "stable",
+      "beta": "bêta",
+      "alpha": "alpha",
+      "planned": "prévu",
+      "pending": "en cours"
+    }
   },
   "pricing": {
     "title": "tarifs",
@@ -45,5 +87,223 @@
     "terms": "conditions",
     "privacy": "confidentialité",
     "legalNotice": "mentions légales"
+  },
+  "pages": {
+    "home": {
+      "badge": "solutions data & ia opensource",
+      "title1": "démocratiser.",
+      "title2": "innover.",
+      "title3": "partager.",
+      "subtitle1": "fondation opensource dédiée aux solutions data et ia.",
+      "subtitle2": "accessible à tous, éthique et communautaire.",
+      "ctaProjects": "découvrir nos projets",
+      "ctaContribute": "contribuer",
+      "values": {
+        "title": "nos valeurs",
+        "items": {
+          "accessibility": {
+            "title": "accessibilité",
+            "desc": "rendre les technologies data et ia accessibles à tous, sans barrière."
+          },
+          "ethics": {
+            "title": "éthique",
+            "desc": "développer des solutions respectueuses de la vie privée et transparentes."
+          },
+          "collaboration": {
+            "title": "collaboration",
+            "desc": "favoriser la collaboration et le partage de connaissances."
+          }
+        }
+      },
+      "impact": {
+        "title": "impact communautaire",
+        "metrics": {
+          "activeProjects": "projets actifs",
+          "contributors": "contributeurs",
+          "organizations": "organisations",
+          "countries": "pays"
+        }
+      },
+      "projects": {
+        "title": "nos projets",
+        "subtitle": "solutions opensource pour démocratiser l'accès aux technologies data et ia.",
+        "viewAll": "voir tous les projets"
+      }
+    },
+    "notFound": {
+      "badge": "erreur http",
+      "title": "page introuvable",
+      "text1": "la ressource demandée n'existe pas.",
+      "text2": "vérifiez l'url ou revenez en arrière en sécurité.",
+      "popularPages": "pages populaires",
+      "completeGuides": "guides complets",
+      "sourceCode": "code source",
+      "stillLost": "toujours perdu ? notre équipe peut aider.",
+      "home": "accueil"
+    },
+    "projects": {
+      "badge": "solutions opensource",
+      "title": "nos projets",
+      "intro": "découvrez nos solutions opensource pour démocratiser l'accès aux technologies data et intelligence artificielle.",
+      "featured": "projets phares",
+      "all": "tous nos projets",
+      "viewOnGithub": "voir sur github",
+      "contribute": "contribuer",
+      "sourceCode": "code source",
+      "demo": "démonstration",
+      "documentation": "documentation",
+      "allCategory": "tous",
+      "categories": {
+        "devops": "devops",
+        "governance": "gouvernance",
+        "data_processing": "traitement de données",
+        "kubernetes": "kubernetes"
+      }
+    },
+    "projectDetail": {
+      "notFoundTitle": "projet non trouvé",
+      "notFoundText": "le projet demandé n'existe pas.",
+      "breadcrumbProjects": "projets",
+      "overview": "aperçu",
+      "features": "fonctionnalités",
+      "backToProjects": "retour aux projets"
+    },
+    "compliance": {
+      "badge": "certifications & conformité",
+      "title": "certifications & conformité",
+      "intro": "démocratiser l'accès aux technologies data et intelligence artificielle pour un monde plus juste et innovant.",
+      "certs": {
+        "fedramp": {
+          "name": "FedRAMP Moderate",
+          "description": "autorisé pour l'usage gouvernemental fédéral"
+        },
+        "soc2": {
+          "name": "SOC 2 Type II",
+          "description": "contrôles de sécurité et de disponibilité"
+        },
+        "iso27001": {
+          "name": "ISO 27001",
+          "description": "management de la sécurité de l'information"
+        },
+        "fips1402": {
+          "name": "FIPS 140-2",
+          "description": "validation des modules cryptographiques"
+        }
+      }
+    },
+    "navbar": {
+      "community": {
+        "contributeSubtitle": "comment participer",
+        "guideSubtitle": "guides et tutoriels",
+        "codeSubtitle": "règles de la communauté",
+        "ctaReady": "prêt à contribuer ?"
+      },
+      "company": {
+        "missionSubtitle": "notre vision et objectifs",
+        "joinSubtitle": "devenir membre",
+        "aboutSubtitle": "notre histoire",
+        "mecenatSubtitle": "partenariats entreprises",
+        "donEnNatureSubtitle": "don de code source, matériels..."
+      }
+    },
+    "useOfData": {
+      "badge": "politique d'utilisation des données",
+      "title": "utilisation des données",
+      "lastUpdated": "dernière mise à jour",
+      "sections": {
+        "types": {
+          "title": "1. types de données",
+          "lines": [
+            "nous traitons les types de données suivants:",
+            "- journaux techniques et métriques",
+            "- informations de compte utilisateur",
+            "- configurations de pipelines",
+            "- analyses de performance"
+          ]
+        },
+        "purposes": {
+          "title": "2. finalités du traitement",
+          "lines": [
+            "vos données sont traitées pour:",
+            "- fourniture et exploitation du service",
+            "- suivi et optimisation des performances",
+            "- sécurité et prévention de la fraude",
+            "- amélioration du produit et développement",
+            "- support client et communication"
+          ]
+        },
+        "legalBasis": {
+          "title": "3. base légale",
+          "lines": [
+            "le traitement repose sur:",
+            "- exécution du contrat (prestation de service)",
+            "- intérêts légitimes (sécurité, amélioration)",
+            "- consentement (communications marketing)",
+            "- obligations légales (conformité)"
+          ]
+        },
+        "minimization": {
+          "title": "4. minimisation des données",
+          "lines": [
+            "nous appliquons les principes de minimisation:",
+            "- collecter uniquement les données nécessaires",
+            "- anonymiser lorsque c'est possible",
+            "- supprimer lorsqu'elles ne sont plus nécessaires",
+            "- chiffrer les informations sensibles"
+          ]
+        },
+        "retention": {
+          "title": "5. durées de conservation",
+          "lines": [
+            "durées de conservation des données:",
+            "- journaux opérationnels : 90 jours",
+            "- données analytiques : 24 mois",
+            "- données de compte : jusqu'à la demande de suppression",
+            "- tickets de support : 3 ans",
+            "- conformité légale : selon les exigences légales"
+          ]
+        },
+        "transfers": {
+          "title": "6. transferts de données",
+          "lines": [
+            "les données peuvent être transférées vers:",
+            "- pays ue/eee (protection adéquate)",
+            "- pays tiers avec décisions d'adéquation",
+            "- prestataires avec garanties appropriées",
+            "- autorités légales si requis"
+          ]
+        },
+        "automation": {
+          "title": "7. traitements automatisés",
+          "lines": [
+            "nous utilisons des traitements automatisés pour:",
+            "- détection d'anomalies et alerting",
+            "- optimisation des performances",
+            "- détection de menaces de sécurité",
+            "- aucune décision automatisée affectant les utilisateurs"
+          ]
+        },
+        "control": {
+          "title": "8. vos contrôles",
+          "lines": [
+            "vous pouvez contrôler vos données:",
+            "- accéder et télécharger vos données",
+            "- corriger les informations inexactes",
+            "- supprimer votre compte et vos données",
+            "- vous opposer à certains traitements",
+            "- retirer votre consentement à tout moment"
+          ]
+        },
+        "contact": {
+          "title": "9. contacter le dpo",
+          "lines": [
+            "délégué à la protection des données:",
+            "adresse : 1 rue de rivoli, 75001 paris, france",
+            "délai de réponse : 30 jours maximum"
+          ],
+          "emailLabel": "email"
+        }
+      }
+    }
   }
 }

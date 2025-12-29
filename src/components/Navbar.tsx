@@ -1,7 +1,27 @@
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown, Database, BarChart, BookOpen, Users, Globe, Target, Github, ExternalLink, Cloud, Server, Shield, Building, Code, Heart, Brain } from "lucide-react"
+import {
+    Menu,
+    X,
+    ChevronDown,
+    Database,
+    BarChart,
+    BookOpen,
+    Users,
+    Globe,
+    Target,
+    Github,
+    ExternalLink,
+    Cloud,
+    Server,
+    Shield,
+    Building,
+    Code,
+    Heart,
+    Brain,
+    BookText
+} from "lucide-react"
 import { LanguageSelector } from "./LanguageSelector"
 import { useTranslation } from "react-i18next"
 import projects from "@/data/projects";
@@ -41,6 +61,12 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
+  const categoryLabel = (cat: string) => {
+    const key = cat.toLowerCase().replace(/\s+/g, '_')
+    const tr = t(`pages.projects.categories.${key}`)
+    return tr || cat
+  }
+
   return (
     <nav className="relative top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
       <div className="container mx-auto container-padding">
@@ -70,7 +96,7 @@ export function Navbar() {
                 onMouseEnter={() => handleDropdownEnter('projects')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <span>projets</span>
+                <span>{t('nav.projects')}</span>
                 <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
                   activeDropdown === 'projects' ? 'rotate-180' : ''
                 }`} />
@@ -89,7 +115,7 @@ export function Navbar() {
                   {Object.entries(featuredProjectsByCategory).map(([category, projects]) => (
                       <div className="mb-6" key={category}>
                         <h4 className="font-mono font-bold text-black mb-4 text-sm flex items-center">
-                          {category}
+                          {categoryLabel(category)}
                         </h4>
 
                         <div className="space-y-3 ml-6">
@@ -129,7 +155,7 @@ export function Navbar() {
                     >
                       <div>
                         <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">
-                          tous les projets
+                          {t('nav.allProjects')}
                         </div>
                       </div>
                     </Link>
@@ -150,7 +176,7 @@ export function Navbar() {
                 onMouseEnter={() => handleDropdownEnter('product')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <span>communauté</span>
+                <span>{t('nav.community')}</span>
                 <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
                   activeDropdown === 'product' ? 'rotate-180' : ''
                 }`} />
@@ -175,8 +201,8 @@ export function Navbar() {
                         01
                       </div>
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">contribuer</div>
-                        <div className="text-sm text-gray-600 font-mono">comment participer</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.contribute')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.community.contributeSubtitle')}</div>
                       </div>
                     </Link>
                     
@@ -189,8 +215,8 @@ export function Navbar() {
                         02
                       </div>
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">documentation</div>
-                        <div className="text-sm text-gray-600 font-mono">guides et tutoriels</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.docs')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.community.guideSubtitle')}</div>
                       </div>
                     </Link>
 
@@ -203,8 +229,8 @@ export function Navbar() {
                         03
                       </div>
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">code de conduite</div>
-                        <div className="text-sm text-gray-600 font-mono">règles de la communauté</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.codeOfConduct')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.community.codeSubtitle')}</div>
                       </div>
                     </Link>
 
@@ -227,11 +253,11 @@ export function Navbar() {
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-gray-600 font-mono">
-                        prêt à contribuer ?
+                        {t('pages.navbar.community.ctaReady')}
                       </div>
                       <a href="https://github.com/vargafoundation" target="_blank" rel="noopener noreferrer">
                         <Button className="btn-primary text-sm font-mono">
-                          rejoindre
+                          {t('common.actions.join')}
                         </Button>
                       </a>
                     </div>
@@ -251,7 +277,7 @@ export function Navbar() {
                 onMouseEnter={() => handleDropdownEnter('company')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <span>fondation</span>
+                <span>{t('nav.company')}</span>
                 <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
                   activeDropdown === 'company' ? 'rotate-180' : ''
                 }`} />
@@ -274,8 +300,8 @@ export function Navbar() {
                     >
                       <Target className="w-4 h-4 text-gray-600 mr-3 mt-1" />
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">mission</div>
-                        <div className="text-sm text-gray-600 font-mono">notre vision et objectifs</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.mission')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.company.missionSubtitle')}</div>
                       </div>
                     </Link>
                     
@@ -286,8 +312,8 @@ export function Navbar() {
                     >
                       <Heart className="w-4 h-4 text-gray-600 mr-3 mt-1" />
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">rejoindre</div>
-                        <div className="text-sm text-gray-600 font-mono">devenir membre</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.join')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.company.joinSubtitle')}</div>
                       </div>
                     </Link>
                     
@@ -310,8 +336,8 @@ export function Navbar() {
                     >
                       <Building className="w-4 h-4 text-gray-600 mr-3 mt-1" />
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">à propos</div>
-                        <div className="text-sm text-gray-600 font-mono">notre histoire</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.about')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.company.aboutSubtitle')}</div>
                       </div>
                     </Link>
 
@@ -322,8 +348,8 @@ export function Navbar() {
                     >
                       <Users className="w-4 h-4 text-gray-600 mr-3 mt-1" />
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">mécénat de compétences</div>
-                        <div className="text-sm text-gray-600 font-mono">partenariats entreprises</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.mecenatCompetences')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.company.mecenatSubtitle')}</div>
                       </div>
                     </Link>
 
@@ -334,10 +360,22 @@ export function Navbar() {
                     >
                       <Code className="w-4 h-4 text-gray-600 mr-3 mt-1" />
                       <div>
-                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">don en nature</div>
-                        <div className="text-sm text-gray-600 font-mono">don de code source, matériels...</div>
+                        <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">{t('nav.donEnNature')}</div>
+                        <div className="text-sm text-gray-600 font-mono">{t('pages.navbar.company.donEnNatureSubtitle')}</div>
                       </div>
                     </Link>
+
+                      <Link
+                          to="/rapports"
+                          className="group flex items-start p-3 hover:bg-gray-50 transition-colors"
+                          onClick={closeAllMenus}
+                      >
+                          <BookText className="w-4 h-4 text-gray-600 mr-3 mt-1" />
+                          <div>
+                              <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors">rapports</div>
+                              <div className="text-sm text-gray-600 font-mono">rapports d'activité et financiers annuels</div>
+                          </div>
+                      </Link>
 
                   </div>
                 </div>
@@ -354,7 +392,7 @@ export function Navbar() {
               }`}
               onClick={closeAllMenus}
             >
-              faire un don
+              {t('nav.donate')}
             </Link>
 
             <a
@@ -363,7 +401,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="px-3 py-2 text-sm font-mono transition-colors text-gray-700 hover:text-black"
             >
-              docs
+              {t('nav.docs')}
             </a>
 
           </div>
@@ -371,18 +409,10 @@ export function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-2">
             <LanguageSelector />
-            <a href="https://docs.varga.foundation" target="_blank" rel="noopener noreferrer">
-              <Button 
-                variant="ghost" 
-                className="text-gray-700 hover:text-black font-mono"
-              >
-                docs
-              </Button>
-            </a>
             <a href="https://github.com/vargafoundation" target="_blank" rel="noopener noreferrer">
               <Button className="btn-primary font-mono">
                 <Github className="mr-2 h-4 w-4" />
-                github
+                {t('nav.github')}
               </Button>
             </a>
           </div>
@@ -409,7 +439,7 @@ export function Navbar() {
           <div className="py-4 space-y-2 border-t border-gray-200 bg-white">
             {/* Projects Mobile Menu */}
             <div className="px-3 py-2">
-              <div className="font-mono font-bold text-black text-sm mb-2">projets</div>
+              <div className="font-mono font-bold text-black text-sm mb-2">{t('nav.projects')}</div>
               <div className="ml-4 space-y-2">
                 {featuredProjects.map((project) => (
                     <Link
@@ -424,67 +454,67 @@ export function Navbar() {
                     to="/projects"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  tous les projets
+                  {t('nav.allProjects')}
                 </Link>
               </div>
             </div>
 
             <div className="px-3 py-2">
-              <div className="font-mono font-bold text-black text-sm mb-2">communauté</div>
+              <div className="font-mono font-bold text-black text-sm mb-2">{t('nav.community')}</div>
               <div className="ml-4 space-y-2">
                 <Link
                     to="/contribute"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  contribuer
+                  {t('nav.contribute')}
                 </Link>
                 <Link
                     to="/guide"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  documentation
+                  {t('nav.docs')}
                 </Link>
                 <Link
                     to="/code-of-conduct"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  code de conduite
+                  {t('nav.codeOfConduct')}
                 </Link>
               </div>
             </div>
 
             <div className="px-3 py-2">
-              <div className="font-mono font-bold text-black text-sm mb-2">fondation</div>
+              <div className="font-mono font-bold text-black text-sm mb-2">{t('nav.company')}</div>
               <div className="ml-4 space-y-2">
                 <Link
                     to="/mission"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  mission
+                  {t('nav.mission')}
                 </Link>
                 <Link
                     to="/join"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  rejoindre
+                  {t('nav.join')}
                 </Link>
                 <Link
                     to="/about"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  à propos
+                  {t('nav.about')}
                 </Link>
                 <Link
                     to="/mecenat-competences"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  mécénat de compétences
+                  {t('nav.mecenatCompetences')}
                 </Link>
                 <Link
                     to="/don-en-nature"
                     className="block text-sm font-mono text-gray-600 hover:text-black"
                 >
-                  don en nature
+                  {t('nav.donEnNature')}
                 </Link>
               </div>
             </div>
@@ -498,7 +528,7 @@ export function Navbar() {
               }`}
               onClick={closeAllMenus}
             >
-              faire un don
+              {t('nav.donate')}
             </Link>
             <Link
                 to="https://docs.varga.foundation" target="_blank"
@@ -509,7 +539,7 @@ export function Navbar() {
                 }`}
                 onClick={closeAllMenus}
             >
-              docs
+              {t('nav.docs')}
             </Link>
             
           </div>

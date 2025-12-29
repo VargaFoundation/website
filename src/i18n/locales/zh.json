@@ -6,11 +6,44 @@
     "pricing": "定价",
     "docs": "文档",
     "github": "github",
+    "projects": "项目",
+    "community": "社区",
+    "contribute": "参与贡献",
+    "guide": "指南",
     "features": "功能",
     "examples": "示例",
     "about": "关于",
     "blog": "博客",
     "careers": "招聘"
+  },
+  "common": {
+    "actions": {
+      "viewOnGithub": "在 github 查看",
+      "contribute": "参与贡献",
+      "backToHome": "返回首页",
+      "backToProjects": "返回项目",
+      "back": "返回"
+    },
+    "metrics": {
+      "stars": "stars",
+      "forks": "forks",
+      "contributors": "贡献者"
+    },
+    "labels": {
+      "links": "链接",
+      "features": "功能",
+      "overview": "概览",
+      "projects": "项目",
+      "lastUpdate": "最近更新",
+      "language": "语言"
+    },
+    "status": {
+      "stable": "稳定",
+      "beta": "测试版",
+      "alpha": "内测",
+      "planned": "计划中",
+      "pending": "进行中"
+    }
   },
   "pricing": {
     "title": "定价",
@@ -45,5 +78,208 @@
     "terms": "条款",
     "privacy": "隐私",
     "legalNotice": "法律声明"
+  },
+  "pages": {
+    "home": {
+      "badge": "开源数据与人工智能解决方案",
+      "title1": "普惠。",
+      "title2": "创新。",
+      "title3": "分享。",
+      "subtitle1": "致力于数据与人工智能解决方案的开源基金会。",
+      "subtitle2": "面向所有人，重视伦理与社区。",
+      "ctaProjects": "探索我们的项目",
+      "ctaContribute": "参与贡献",
+      "values": {
+        "title": "我们的价值观",
+        "items": {
+          "accessibility": {
+            "title": "可及性",
+            "desc": "让数据与人工智能技术人人可用、无门槛。"
+          },
+          "ethics": {
+            "title": "伦理",
+            "desc": "构建尊重隐私、透明可审计的解决方案。"
+          },
+          "collaboration": {
+            "title": "协作",
+            "desc": "促进协作与知识共享。"
+          }
+        }
+      },
+      "impact": {
+        "title": "社区影响",
+        "metrics": {
+          "activeProjects": "活跃项目",
+          "contributors": "贡献者",
+          "organizations": "组织",
+          "countries": "国家"
+        }
+      },
+      "projects": {
+        "title": "我们的项目",
+        "subtitle": "开源方案，助力大众获取数据与人工智能技术。",
+        "viewAll": "查看全部项目"
+      }
+    },
+    "notFound": {
+      "badge": "http 错误",
+      "title": "页面未找到",
+      "text1": "请求的资源不存在。",
+      "text2": "请检查链接或安全返回上一页。",
+      "popularPages": "常用页面",
+      "completeGuides": "完整指南",
+      "sourceCode": "源代码",
+      "stillLost": "仍然困惑？我们的团队可以帮助您。",
+      "home": "首页"
+    },
+    "projects": {
+      "badge": "开源解决方案",
+      "title": "我们的项目",
+      "intro": "探索我们的开源解决方案，帮助大众获取数据与人工智能技术。",
+      "featured": "精选项目",
+      "all": "全部项目",
+      "viewOnGithub": "在 github 查看",
+      "contribute": "参与贡献",
+      "sourceCode": "源代码",
+      "demo": "演示",
+      "documentation": "文档",
+      "allCategory": "全部",
+      "categories": {
+        "devops": "devops",
+        "governance": "治理",
+        "data_processing": "数据处理",
+        "kubernetes": "kubernetes"
+      }
+    },
+    "projectDetail": {
+      "notFoundTitle": "未找到项目",
+      "notFoundText": "所请求的项目不存在。",
+      "breadcrumbProjects": "项目",
+      "overview": "概览",
+      "features": "功能",
+      "backToProjects": "返回项目"
+    },
+    "compliance": {
+      "badge": "认证与合规",
+      "title": "认证与合规",
+      "intro": "让更多人能够使用数据与人工智能技术，构建更公平、更具创新性的世界。",
+      "certs": {
+        "fedramp": {
+          "name": "FedRAMP Moderate",
+          "description": "获准用于联邦政府"
+        },
+        "soc2": {
+          "name": "SOC 2 Type II",
+          "description": "安全性与可用性控制"
+        },
+        "iso27001": {
+          "name": "ISO 27001",
+          "description": "信息安全管理"
+        },
+        "fips1402": {
+          "name": "FIPS 140-2",
+          "description": "密码模块认证"
+        }
+      }
+    },
+    "useOfData": {
+      "badge": "数据使用政策",
+      "title": "数据使用",
+      "lastUpdated": "最近更新",
+      "sections": {
+        "types": {
+          "title": "1. 数据类型",
+          "lines": [
+            "我们处理以下数据类型:",
+            "- 技术日志与指标",
+            "- 用户账户信息",
+            "- 流水线配置",
+            "- 性能分析"
+          ]
+        },
+        "purposes": {
+          "title": "2. 处理目的",
+          "lines": [
+            "您的数据用于:",
+            "- 服务提供与运行",
+            "- 性能监控与优化",
+            "- 安全与防欺诈",
+            "- 产品改进与研发",
+            "- 客户支持与沟通"
+          ]
+        },
+        "legalBasis": {
+          "title": "3. 法律依据",
+          "lines": [
+            "处理依据:",
+            "- 合同履行（提供服务）",
+            "- 合法利益（安全、改进）",
+            "- 同意（营销通信）",
+            "- 法定义务（合规）"
+          ]
+        },
+        "minimization": {
+          "title": "4. 最小化原则",
+          "lines": [
+            "我们遵循数据最小化原则:",
+            "- 仅收集必要数据",
+            "- 尽可能匿名化",
+            "- 不再需要时删除",
+            "- 加密敏感信息"
+          ]
+        },
+        "retention": {
+          "title": "5. 保留期限",
+          "lines": [
+            "数据保留期限:",
+            "- 运行日志：90 天",
+            "- 分析数据：24 个月",
+            "- 账户数据：直至删除请求",
+            "- 支持工单：3 年",
+            "- 依法合规：按法律要求"
+          ]
+        },
+        "transfers": {
+          "title": "6. 数据传输",
+          "lines": [
+            "数据可能被传输至:",
+            "- 欧盟/欧洲经济区（充分保护）",
+            "- 具有充分性决定的第三国",
+            "- 具备适当保障的服务提供商",
+            "- 法律要求的有关机关"
+          ]
+        },
+        "automation": {
+          "title": "7. 自动化处理",
+          "lines": [
+            "我们使用自动化处理用于:",
+            "- 异常检测与告警",
+            "- 性能优化",
+            "- 安全威胁检测",
+            "- 无影响用户的自动化决策"
+          ]
+        },
+        "control": {
+          "title": "8. 您的控制权",
+          "lines": [
+            "您可以控制您的数据:",
+            "- 访问与下载您的数据",
+            "- 更正不准确的信息",
+            "- 删除您的账户与数据",
+            "- 反对特定处理",
+            "- 随时撤回同意"
+          ]
+        },
+        "contact": {
+          "title": "9. 联系 DPO",
+          "lines": [
+            "数据保护官:",
+            "地址：法国巴黎里沃利街 1 号，75001",
+            "回复时间：最多 30 天"
+          ],
+          "emailLabel": "邮箱"
+        }
+      }
+    }
   }
 }

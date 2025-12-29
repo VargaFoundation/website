@@ -6,11 +6,53 @@
     "pricing": "pricing",
     "docs": "docs",
     "github": "github",
+    "projects": "projects",
+    "community": "community",
+    "contribute": "contribute",
+    "guide": "guide",
+    "allProjects": "all projects",
+    "donate": "donate",
+    "codeOfConduct": "code of conduct",
+    "mission": "mission",
+    "join": "join",
+    "mecenatCompetences": "skills-based volunteering",
+    "donEnNature": "in-kind donation",
     "features": "features",
     "examples": "examples",
     "about": "about",
     "blog": "blog",
     "careers": "careers"
+  },
+  "common": {
+    "actions": {
+      "viewOnGithub": "view on github",
+      "contribute": "contribute",
+      "backToHome": "back to home",
+      "backToProjects": "back to projects",
+      "join": "join",
+      "back": "back"
+    },
+    "metrics": {
+      "stars": "stars",
+      "forks": "forks",
+      "contributors": "contributors"
+    },
+    "labels": {
+      "links": "links",
+      "features": "features",
+      "overview": "overview",
+      "projects": "projects",
+      "lastUpdate": "last update",
+      "language": "language",
+      "stats": "statistics"
+    },
+    "status": {
+      "stable": "stable",
+      "beta": "beta",
+      "alpha": "alpha",
+      "planned": "planned",
+      "pending": "pending"
+    }
   },
   "pricing": {
     "title": "pricing",
@@ -45,5 +87,230 @@
     "terms": "terms",
     "privacy": "privacy",
     "legalNotice": "legal notice"
+  },
+  "pages": {
+    "projects": {
+      "badge": "opensource solutions",
+      "title": "our projects",
+      "intro": "discover our open source solutions to democratize access to data and artificial intelligence technologies.",
+      "featured": "featured projects",
+      "all": "all our projects",
+      "viewOnGithub": "view on github",
+      "contribute": "contribute",
+      "sourceCode": "source code",
+      "demo": "demo",
+      "documentation": "documentation",
+      "allCategory": "all",
+      "categories": {
+        "devops": "devops",
+        "governance": "governance",
+        "data_processing": "data processing",
+        "kubernetes": "kubernetes"
+      },
+      "ctaTitle": "contribute",
+      "ctaText": "join our community and help build open source solutions for everyone.",
+      "ctaGuide": "contribution guide",
+      "ctaJoinDiscord": "join discord"
+    },
+    "projectDetail": {
+      "notFoundTitle": "project not found",
+      "notFoundText": "the requested project does not exist.",
+      "breadcrumbProjects": "projects",
+      "overview": "overview",
+      "features": "features",
+      "backToProjects": "back to projects"
+    },
+    "compliance": {
+      "badge": "certifications & compliance",
+      "title": "certifications & compliance",
+      "intro": "democratizing access to data and artificial intelligence technologies to create a fairer and more innovative world.",
+      "certs": {
+        "fedramp": {
+          "name": "FedRAMP Moderate",
+          "description": "authorized for federal government use"
+        },
+        "soc2": {
+          "name": "SOC 2 Type II",
+          "description": "security and availability controls"
+        },
+        "iso27001": {
+          "name": "ISO 27001",
+          "description": "information security management"
+        },
+        "fips1402": {
+          "name": "FIPS 140-2",
+          "description": "cryptographic module validation"
+        }
+      }
+    },
+    "navbar": {
+      "community": {
+        "contributeSubtitle": "how to participate",
+        "guideSubtitle": "guides and tutorials",
+        "codeSubtitle": "community rules",
+        "ctaReady": "ready to contribute?"
+      },
+      "company": {
+        "missionSubtitle": "our vision and goals",
+        "joinSubtitle": "become a member",
+        "aboutSubtitle": "our story",
+        "mecenatSubtitle": "company partnerships",
+        "donEnNatureSubtitle": "donate code, hardware..."
+      }
+    },
+    "useOfData": {
+      "badge": "data usage policy",
+      "title": "data usage",
+      "lastUpdated": "last updated",
+      "sections": {
+        "types": {
+          "title": "1. data types",
+          "lines": [
+            "we process these data types:",
+            "- technical logs and metrics",
+            "- user account information",
+            "- pipeline configurations",
+            "- performance analytics"
+          ]
+        },
+        "purposes": {
+          "title": "2. processing purposes",
+          "lines": [
+            "your data is processed for:",
+            "- service provision and operation",
+            "- performance monitoring and optimization",
+            "- security and fraud prevention",
+            "- product improvement and development",
+            "- customer support and communication"
+          ]
+        },
+        "legalBasis": {
+          "title": "3. legal basis",
+          "lines": [
+            "processing is based on:",
+            "- contract performance (service delivery)",
+            "- legitimate interests (security, improvement)",
+            "- consent (marketing communications)",
+            "- legal obligations (compliance)"
+          ]
+        },
+        "minimization": {
+          "title": "4. data minimization",
+          "lines": [
+            "we follow data minimization principles:",
+            "- collect only necessary data",
+            "- anonymize when possible",
+            "- delete when no longer needed",
+            "- encrypt sensitive information"
+          ]
+        },
+        "retention": {
+          "title": "5. retention periods",
+          "lines": [
+            "data retention periods:",
+            "- operational logs: 90 days",
+            "- analytics data: 24 months",
+            "- account data: until deletion request",
+            "- support tickets: 3 years",
+            "- legal compliance: as required by law"
+          ]
+        },
+        "transfers": {
+          "title": "6. data transfers",
+          "lines": [
+            "data may be transferred to:",
+            "- eu/eea countries (adequate protection)",
+            "- third countries with adequacy decisions",
+            "- service providers with appropriate safeguards",
+            "- legal authorities when required"
+          ]
+        },
+        "automation": {
+          "title": "7. automated processing",
+          "lines": [
+            "we use automated processing for:",
+            "- anomaly detection and alerting",
+            "- performance optimization",
+            "- security threat detection",
+            "- no automated decision-making affecting users"
+          ]
+        },
+        "control": {
+          "title": "8. your control",
+          "lines": [
+            "you can control your data:",
+            "- access and download your data",
+            "- correct inaccurate information",
+            "- delete your account and data",
+            "- object to certain processing",
+            "- withdraw consent at any time"
+          ]
+        },
+        "contact": {
+          "title": "9. contact dpo",
+          "lines": [
+            "data protection officer:",
+            "address: 1 rue de rivoli, 75001 paris, france",
+            "response time: 30 days maximum"
+          ],
+          "emailLabel": "email"
+        }
+      }
+    }
+  }
+  ,
+  "pages": {
+    "home": {
+      "badge": "opensource data & ai solutions",
+      "title1": "democratize.",
+      "title2": "innovate.",
+      "title3": "share.",
+      "subtitle1": "opensource foundation dedicated to data and ai solutions.",
+      "subtitle2": "accessible to all, ethical and community-driven.",
+      "ctaProjects": "discover our projects",
+      "ctaContribute": "contribute",
+      "values": {
+        "title": "our values",
+        "items": {
+          "accessibility": {
+            "title": "accessibility",
+            "desc": "make data and ai technologies accessible to everyone, without barriers."
+          },
+          "ethics": {
+            "title": "ethics",
+            "desc": "build solutions that respect privacy and are transparent."
+          },
+          "collaboration": {
+            "title": "collaboration",
+            "desc": "promote collaboration and knowledge sharing."
+          }
+        }
+      },
+      "impact": {
+        "title": "community impact",
+        "metrics": {
+          "activeProjects": "active projects",
+          "contributors": "contributors",
+          "organizations": "organizations",
+          "countries": "countries"
+        }
+      },
+      "projects": {
+        "title": "our projects",
+        "subtitle": "opensource solutions to democratize access to data and ai technologies.",
+        "viewAll": "see all projects"
+      }
+    },
+    "notFound": {
+      "badge": "http error",
+      "title": "page not found",
+      "text1": "the requested resource does not exist.",
+      "text2": "check the url or navigate back to safety.",
+      "popularPages": "popular pages",
+      "completeGuides": "complete guides",
+      "sourceCode": "source code",
+      "stillLost": "still lost? our team can help.",
+      "home": "home"
+    }
   }
 }

@@ -12,7 +12,8 @@ export function LanguageSelector() {
     { code: 'zh', name: '中文', flag: '🇨🇳' }
   ]
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
+  const currentCode = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]
+  const currentLanguage = languages.find(lang => lang.code === currentCode) || languages[0]
 
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode)
@@ -40,7 +41,7 @@ export function LanguageSelector() {
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
               className={`w-full flex items-center px-4 py-3 text-sm font-mono hover:bg-gray-50 transition-colors ${
-                i18n.language === language.code ? 'bg-gray-50 text-black' : 'text-gray-700'
+                currentCode === language.code ? 'bg-gray-50 text-black' : 'text-gray-700'
               }`}
             >
               <span className="mr-3">{language.flag}</span>

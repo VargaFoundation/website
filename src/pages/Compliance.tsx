@@ -1,26 +1,25 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Compliance() {
+    const { t } = useTranslation()
     const certifications = [
         {
-            name: "FedRAMP Moderate",
-            description: "authorized for federal government use",
-            status: "planned"
+            key: 'fedramp',
+            status: 'planned'
         },
         {
-            name: "SOC 2 Type II",
-            description: "security and availability controls",
-            status: "pending"
+            key: 'soc2',
+            status: 'pending'
         },
         {
-            name: "ISO 27001",
-            description: "information security management",
-            status: "pending"
+            key: 'iso27001',
+            status: 'pending'
         },
         {
-            name: "FIPS 140-2",
-            description: "cryptographic module validation",
-            status: "planned"
+            key: 'fips1402',
+            status: 'planned'
         }
-    ]
+    ] as const
 
     return (
         <div className="min-h-screen bg-white">
@@ -31,16 +30,15 @@ export default function Compliance() {
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center px-3 py-1 border border-gray-300 text-gray-700 text-sm font-mono mb-12">
                             <div className="w-1 h-1 bg-black mr-2"></div>
-                            certifications & compliance
+                            {t('pages.compliance.badge')}
                         </div>
 
                         <h1 className="text-6xl md:text-7xl text-display mb-12 text-black leading-none">
-                            certifications & compliance
+                            {t('pages.compliance.title')}
                         </h1>
 
                         <p className="text-lg md:text-xl text-gray-600 text-body mb-16 max-w-3xl mx-auto">
-                            démocratiser l'accès aux technologies data et intelligence artificielle
-                            pour créer un monde plus équitable et innovant.
+                            {t('pages.compliance.intro')}
                         </p>
                     </div>
                 </div>
@@ -55,13 +53,13 @@ export default function Compliance() {
                             {certifications.map((cert, index) => (
                                 <div key={index} className="bg-white border border-gray-200 p-6">
                                     <div className="flex items-center justify-between mb-4">
-                                        <h3 className="font-mono font-bold text-black">{cert.name}</h3>
+                                        <h3 className="font-mono font-bold text-black">{t(`pages.compliance.certs.${cert.key}.name`)}</h3>
                                         <div
                                             className="inline-flex items-center px-2 py-1 bg-green-100 text-green-800 font-mono text-xs">
-                                            {cert.status}
+                                            {t(`common.status.${cert.status}`)}
                                         </div>
                                     </div>
-                                    <p className="text-gray-600 font-mono text-sm">{cert.description}</p>
+                                    <p className="text-gray-600 font-mono text-sm">{t(`pages.compliance.certs.${cert.key}.description`)}</p>
                                 </div>
                             ))}
                         </div>

@@ -5,8 +5,10 @@ import { AnimatedCounter } from "@/components/AnimatedCounter"
 import { ClientCarousel } from "@/components/ClientCarousel"
 import { WorldMap } from "@/components/WorldMap"
 import projects from "@/data/projects.tsx";
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+  const { t } = useTranslation()
   return (
     <>
       {/* Hero Section */}
@@ -24,37 +26,37 @@ export default function Home() {
             {/* Minimal badge */}
             <div className="inline-flex items-center px-3 py-1 border border-gray-300 text-gray-700 text-sm font-mono mb-12">
               <div className="w-1 h-1 bg-black mr-2"></div>
-              solutions opensource data & ia
+              {t('pages.home.badge')}
             </div>
 
             {/* Main Headline */}
             <h1 className="text-6xl md:text-7xl lg:text-8xl text-display mb-12 text-black leading-none">
-              démocratiser.
+              {t('pages.home.title1')}
               <br />
-              innover.
+              {t('pages.home.title2')}
               <br />
-              partager.
+              {t('pages.home.title3')}
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-gray-600 text-body mb-16 max-w-3xl mx-auto">
-              fondation opensource dédiée aux solutions data et ia.
+              {t('pages.home.subtitle1')}
               <br />
-              accessible à tous, éthique et communautaire.
+              {t('pages.home.subtitle2')}
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
               <Link to="/projects">
                 <Button className="btn-primary px-8 py-4 text-base font-mono">
-                  découvrir nos projets
+                  {t('pages.home.ctaProjects')}
                 </Button>
               </Link>
               
               <Link to="/contribute">
                 <Button className="btn-secondary px-8 py-4 text-base font-mono">
                   <Heart className="mr-2 h-4 w-4" />
-                  contribuer
+                  {t('pages.home.ctaContribute')}
                 </Button>
               </Link>
             </div>
@@ -71,10 +73,10 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl text-display mb-8 text-black">
-                nos valeurs
+                {t('pages.home.values.title')}
               </h2>
               <p className="text-lg text-gray-600 font-mono max-w-2xl mx-auto">
-                les principes qui guident notre action au service de la communauté.
+                {/* Optional subtitle could be added here if needed */}
               </p>
             </div>
             
@@ -83,9 +85,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-black text-white flex items-center justify-center mx-auto mb-6 font-mono text-sm">
                   01
                 </div>
-                <h3 className="text-xl font-mono font-bold mb-4 text-black">accessibilité</h3>
+                <h3 className="text-xl font-mono font-bold mb-4 text-black">{t('pages.home.values.items.accessibility.title')}</h3>
                 <p className="text-gray-600 text-body font-mono text-sm">
-                  rendre les technologies data et ia accessibles à tous, sans barrière.
+                  {t('pages.home.values.items.accessibility.desc')}
                 </p>
               </div>
 
@@ -93,9 +95,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-black text-white flex items-center justify-center mx-auto mb-6 font-mono text-sm">
                   02
                 </div>
-                <h3 className="text-xl font-mono font-bold mb-4 text-black">éthique</h3>
+                <h3 className="text-xl font-mono font-bold mb-4 text-black">{t('pages.home.values.items.ethics.title')}</h3>
                 <p className="text-gray-600 text-body font-mono text-sm">
-                  développer des solutions respectueuses de la vie privée et transparentes.
+                  {t('pages.home.values.items.ethics.desc')}
                 </p>
               </div>
 
@@ -103,9 +105,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-black text-white flex items-center justify-center mx-auto mb-6 font-mono text-sm">
                   03
                 </div>
-                <h3 className="text-xl font-mono font-bold mb-4 text-black">collaboration</h3>
+                <h3 className="text-xl font-mono font-bold mb-4 text-black">{t('pages.home.values.items.collaboration.title')}</h3>
                 <p className="text-gray-600 text-body font-mono text-sm">
-                  favoriser la collaboration et le partage de connaissances.
+                  {t('pages.home.values.items.collaboration.desc')}
                 </p>
               </div>
             </div>
@@ -118,32 +120,32 @@ export default function Home() {
         <div className="container mx-auto container-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl text-display mb-16 text-black">
-              impact communautaire
+              {t('pages.home.impact.title')}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-mono font-bold text-black mb-2">
                   <AnimatedCounter end={5} suffix="+" />
                 </div>
-                <div className="text-gray-600 font-mono text-sm">projets actifs</div>
+                <div className="text-gray-600 font-mono text-sm">{t('pages.home.impact.metrics.activeProjects')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-mono font-bold text-black mb-2">
                   <AnimatedCounter end={12} suffix="+" />
                 </div>
-                <div className="text-gray-600 font-mono text-sm">contributeurs</div>
+                <div className="text-gray-600 font-mono text-sm">{t('pages.home.impact.metrics.contributors')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-mono font-bold text-black mb-2">
                   <AnimatedCounter end={11} suffix="+" />
                 </div>
-                <div className="text-gray-600 font-mono text-sm">organisations</div>
+                <div className="text-gray-600 font-mono text-sm">{t('pages.home.impact.metrics.organizations')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-mono font-bold text-black mb-2">
                   <AnimatedCounter end={3} />
                 </div>
-                <div className="text-gray-600 font-mono text-sm">pays</div>
+                <div className="text-gray-600 font-mono text-sm">{t('pages.home.impact.metrics.countries')}</div>
               </div>
             </div>
           </div>
@@ -157,10 +159,10 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-4xl md:text-5xl text-display mb-8 text-black">
-                  nos projets
+                  {t('pages.home.projects.title')}
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 font-mono">
-                  solutions opensource pour démocratiser l'accès aux technologies data et ia.
+                  {t('pages.home.projects.subtitle')}
                 </p>
 
                 <div className="space-y-6">
@@ -184,7 +186,7 @@ export default function Home() {
                     >
                       <div>
                         <div className="font-mono font-bold text-black group-hover:text-blue-600 transition-colors text-sm">
-                          voir tous les projets
+                          {t('pages.home.projects.viewAll')}
                         </div>
                       </div>
                     </Link>

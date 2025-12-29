@@ -2,12 +2,14 @@ import { useParams, Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { getProjectById } from "@/data/projects"
 import { Github, ExternalLink, Eye, Star, GitBranch, Users, Calendar, Code, Download, ArrowLeft, CheckCircle, Terminal, Book } from "lucide-react"
+import { useTranslation } from 'react-i18next'
 
 export default function ProjectDetail() {
+    const { t, i18n } = useTranslation()
     const { id } = useParams<{ id: string }>()
 
     if (!id) {
-        return <div>Project ID not found</div>
+        return <div>{t('pages.projectDetail.notFoundTitle')}</div>
     }
 
     const project = getProjectById(id)
@@ -16,12 +18,12 @@ export default function ProjectDetail() {
         return (
             <div className="min-h-screen bg-white flex items-center justify-center">
                 <div className="text-center">
-                    <h1 className="text-4xl font-mono font-bold text-black mb-4">Projet non trouvé</h1>
-                    <p className="text-gray-600 font-mono mb-8">Le projet demandé n'existe pas.</p>
+                    <h1 className="text-4xl font-mono font-bold text-black mb-4">{t('pages.projectDetail.notFoundTitle')}</h1>
+                    <p className="text-gray-600 font-mono mb-8">{t('pages.projectDetail.notFoundText')}</p>
                     <Link to="/projects">
                         <Button className="btn-primary font-mono">
                             <ArrowLeft className="mr-2 h-4 w-4" />
-                            Retour aux projets
+                            {t('pages.projectDetail.backToProjects')}
                         </Button>
                     </Link>
                 </div>
@@ -46,7 +48,7 @@ export default function ProjectDetail() {
                     <div className="max-w-6xl mx-auto">
                         {/* Breadcrumb */}
                         <div className="flex items-center mb-8 font-mono text-sm">
-                            <Link to="/projects" className="text-gray-600 hover:text-black">projets</Link>
+                            <Link to="/projects" className="text-gray-600 hover:text-black">{t('pages.projectDetail.breadcrumbProjects')}</Link>
                             <span className="mx-2 text-gray-400">/</span>
                             <span className="text-black">{project.name.toLowerCase()}</span>
                         </div>
@@ -68,17 +70,19 @@ export default function ProjectDetail() {
                                 </div>
 
                                 <p className="text-lg text-gray-600 font-mono mb-8">
-                                    {project.description}
+                                    {(project.descriptionI18n?.[(i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]] || project.description)}
                                 </p>
 
-                                <p className="text-gray-700 font-mono text-sm mb-8 leading-relaxed">
-                                    {project.longDescription}
-                                </p>
+                                {project.longDescription || project.longDescriptionI18n ? (
+                                    <p className="text-gray-700 font-mono text-sm mb-8 leading-relaxed">
+                                        {(project.longDescriptionI18n?.[(i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]] || project.longDescription) as any}
+                                    </p>
+                                ) : null}
 
                                 {/* Screenshots */}
                                 {project.screenshots && (
                                     <div className="mb-12">
-                                        <h3 className="text-2xl font-mono font-bold text-black mb-6">aperçu</h3>
+                                        <h3 className="text-2xl font-mono font-bold text-black mb-6">{t('common.labels.overview')}</h3>
                                         <div className="grid md:grid-cols-2 gap-4">
                                             {project.screenshots.map((screenshot, index) => (
                                                 <img
@@ -94,7 +98,7 @@ export default function ProjectDetail() {
 
                                 {/* Features */}
                                 <div className="mb-12">
-                                    <h3 className="text-2xl font-mono font-bold text-black mb-6">fonctionnalités</h3>
+                                    <h3 className="text-2xl font-mono font-bold text-black mb-6">{t('pages.projectDetail.features')}</h3>
                                     <div className="grid md:grid-cols-2 gap-4">
                                         {project.features.map((feature, index) => (
                                             <div key={index} className="flex items-start">
@@ -110,40 +114,40 @@ export default function ProjectDetail() {
                             <div className="space-y-8">
                                 {/* Project Stats */}
                                 <div className="bg-gray-50 border border-gray-200 p-6">
-                                    <h3 className="font-mono font-bold text-black mb-4">statistiques</h3>
+                                    <h3 className="font-mono font-bold text-black mb-4">{t('common.labels.stats')}</h3>
                                     <div className="space-y-3 font-mono text-sm">
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <Star className="w-4 h-4 text-yellow-500 mr-2" />
-                                                <span className="text-gray-600">stars</span>
+                                                <span className="text-gray-600">{t('common.metrics.stars')}</span>
                                             </div>
                                             <span className="text-black font-bold">{project.stars}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <GitBranch className="w-4 h-4 text-gray-600 mr-2" />
-                                                <span className="text-gray-600">forks</span>
+                                                <span className="text-gray-600">{t('common.metrics.forks')}</span>
                                             </div>
                                             <span className="text-black font-bold">{project.forks}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <Users className="w-4 h-4 text-gray-600 mr-2" />
-                                                <span className="text-gray-600">contributeurs</span>
+                                                <span className="text-gray-600">{t('common.metrics.contributors')}</span>
                                             </div>
                                             <span className="text-black font-bold">{project.contributors}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <Calendar className="w-4 h-4 text-gray-600 mr-2" />
-                                                <span className="text-gray-600">dernière maj</span>
+                                                <span className="text-gray-600">{t('common.labels.lastUpdate')}</span>
                                             </div>
                                             <span className="text-black font-bold">{new Date(project.lastUpdate).toLocaleDateString()}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <Code className="w-4 h-4 text-gray-600 mr-2" />
-                                                <span className="text-gray-600">langage</span>
+                                                <span className="text-gray-600">{t('common.labels.language')}</span>
                                             </div>
                                             <span className="text-black font-bold">{project.language}</span>
                                         </div>
@@ -152,7 +156,7 @@ export default function ProjectDetail() {
 
                                 {/* Links */}
                                 <div className="bg-gray-50 border border-gray-200 p-6">
-                                    <h3 className="font-mono font-bold text-black mb-4">liens</h3>
+                                    <h3 className="font-mono font-bold text-black mb-4">{t('common.labels.links')}</h3>
                                     <div className="space-y-3">
                                         <a
                                             href={project.github}
@@ -161,7 +165,7 @@ export default function ProjectDetail() {
                                             className="flex items-center text-gray-700 hover:text-black transition-colors font-mono text-sm"
                                         >
                                             <Github className="w-4 h-4 mr-3" />
-                                            code source
+                                            {t('pages.projects.sourceCode')}
                                         </a>
                                         {project.demo && (
                                             <a
@@ -171,7 +175,7 @@ export default function ProjectDetail() {
                                                 className="flex items-center text-gray-700 hover:text-black transition-colors font-mono text-sm"
                                             >
                                                 <Eye className="w-4 h-4 mr-3" />
-                                                démonstration
+                                                {t('pages.projects.demo')}
                                             </a>
                                         )}
                                         {project.docs && (
@@ -182,7 +186,7 @@ export default function ProjectDetail() {
                                                 className="flex items-center text-gray-700 hover:text-black transition-colors font-mono text-sm"
                                             >
                                                 <Book className="w-4 h-4 mr-3" />
-                                                documentation
+                                                {t('pages.projects.documentation')}
                                             </a>
                                         )}
                                     </div>
