@@ -47,7 +47,7 @@ const projects: Project[] = [
     {
         id: "nexberos",
         name: "nexberos",
-        featured: true,
+        featured: false,
         description: "un bridge Kerberos pour Kubernetes permettant de s'authentifier sur des clusters Hadoop à partir d'un Pod Kubernetes",
         descriptionI18n: {
             en: "a Kerberos bridge for Kubernetes that allows authentication to Hadoop clusters from a Kubernetes Pod",
@@ -144,7 +144,7 @@ const projects: Project[] = [
     {
         id: "velith",
         name: "velith",
-        featured: true,
+        featured: false,
         description: "une spécification industrielle définissant un agrément entre un producteur et un consommateur de données afin de garantir la conformité des données pour les parties",
         descriptionI18n: {
             en: "an industry specification defining a data agreement between producer and consumer to ensure data compliance",
@@ -187,7 +187,7 @@ const projects: Project[] = [
     {
         id: "kryon",
         name: "kryon",
-        featured: true,
+        featured: false,
         description: "une solution permettant de challenger un jeu de données par rapport à une spécification Velith",
         descriptionI18n: {
             en: "a solution to validate a dataset against a Velith specification",
@@ -230,13 +230,8 @@ const projects: Project[] = [
     {
         id: "rivio",
         name: "rivio",
-        featured: false,
-        description: "un adapteur Hadoop permettant de lancer des traitements sur Kubernetes, basé sur la rétro-ingénieurie du protocole HRPC, avec pour objectif de faciliter la migration de projets « legacy » Hadoop vers Kubernetes",
-        descriptionI18n: {
-            en: "a Hadoop adapter to run jobs on Kubernetes, based on reverse‑engineering of the HRPC protocol, to ease migration of legacy Hadoop projects to Kubernetes",
-            fr: "un adapteur Hadoop permettant de lancer des traitements sur Kubernetes, basé sur la rétro-ingénieurie du protocole HRPC, avec pour objectif de faciliter la migration de projets « legacy » Hadoop vers Kubernetes",
-            zh: "一个 Hadoop 适配器，可基于对 HRPC 协议的逆向工程在 Kubernetes 上运行任务，助力遗留 Hadoop 项目迁移到 Kubernetes"
-        },
+        featured: true,
+        description: "un operator Kubernetes permettant de gérer des ressources dans Hadoop (HDFS, YARN...) à partir de CRDs",
         category: "kubernetes",
         language: "Java",
         stars: 1,
@@ -273,7 +268,7 @@ const projects: Project[] = [
     {
         id: "vorath",
         name: "vorath",
-        featured: false,
+        featured: true,
         description: "un CSI Hadoop permettant à des Pods dans Kubernetesde monter des volumes basés sur HDFS",
         category: "kubernetes",
         language: "Java",
@@ -311,8 +306,13 @@ const projects: Project[] = [
     {
         id: "weave",
         name: "weave",
-        featured: false,
-        description: "un operator Kubernetes permettant de gérer des ressources dans Hadoop (HDFS, YARN...) à partir de CRDs",
+        featured: true,
+        description: "un adapteur Hadoop permettant de lancer des traitements sur Kubernetes, basé sur la rétro-ingénieurie du protocole HRPC, avec pour objectif de faciliter la migration de projets « legacy » Hadoop vers Kubernetes",
+        descriptionI18n: {
+            en: "a Hadoop adapter to run jobs on Kubernetes, based on reverse‑engineering of the HRPC protocol, to ease migration of legacy Hadoop projects to Kubernetes",
+            fr: "un adapteur Hadoop permettant de lancer des traitements sur Kubernetes, basé sur la rétro-ingénieurie du protocole HRPC, avec pour objectif de faciliter la migration de projets « legacy » Hadoop vers Kubernetes",
+            zh: "一个 Hadoop 适配器，可基于对 HRPC 协议的逆向工程在 Kubernetes 上运行任务，助力遗留 Hadoop 项目迁移到 Kubernetes"
+        },
         category: "kubernetes",
         language: "Java",
         stars: 1,
@@ -338,6 +338,49 @@ const projects: Project[] = [
             steps: [
                 'git clone https://github.com/vargafoundation/weave',
                 'cd weave'
+            ]
+        },
+        usage: {
+            basicExample: ``
+        },
+        roadmap: [
+        ]
+    },
+    {
+        id: "tarn",
+        name: "tarn",
+        featured: true,
+        description: "tarn vise à supporter l'inférence de modèles de machine learning (ML) et deep learning (DL) en mode online et batch, avec une scalabilité horizontale automatique, un load balancing intégré, une haute disponibilité, et une intégration native avec l'écosystème Hadoop (HDFS pour stockage, YARN pour orchestratio",
+        descriptionI18n: {
+            en: "",
+            fr: "tarn vise à supporter l'inférence de modèles de machine learning (ML) et deep learning (DL) en mode online et batch, avec une scalabilité horizontale automatique, un load balancing intégré, une haute disponibilité, et une intégration native avec l'écosystème Hadoop (HDFS pour stockage, YARN pour orchestration",
+            zh: "s"
+        },
+        category: "kubernetes",
+        language: "Java",
+        stars: 1,
+        forks: 0,
+        contributors: 1,
+        lastUpdate: "2025-12-30",
+        status: "beta",
+        icon: Database,
+        features: [
+            "hadoop",
+            "nvidia"
+        ],
+        github: "https://github.com/vargafoundation/tarn",
+        demo: "https://demo.varga.foundation",
+        docs: "https://docs.varga.foundation",
+        installation: {
+            requirements: [
+                'Java 17+',
+                'Docker',
+                'Nvidia GPU',
+                '4GB RAM minimum'
+            ],
+            steps: [
+                'git clone https://github.com/vargafoundation/tarn',
+                'cd tarn'
             ]
         },
         usage: {
