@@ -396,7 +396,7 @@ const projects: Project[] = [
         description: "MLflow on Hadoop, using HDFS as a model registry and HBase for metrics and experiences",
         descriptionI18n: {
             en: "",
-            fr: "kirka est un portage de MLflow utilisant Hadoop, notamment HDFS en tant que model registry et HBase pour le stockage des métriques et des expériences"
+            fr: "kirka est un portage de MLflow utilisant Hadoop, notamment HDFS en tant que model registry et HBase pour le stockage des métriques et des expériences",
             zh: "s"
         },
         category: "ml",
