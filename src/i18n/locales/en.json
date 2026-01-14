@@ -102,6 +102,7 @@
       "documentation": "documentation",
       "allCategory": "all",
       "categories": {
+        "ml": "ml",
         "devops": "devops",
         "governance": "governance",
         "data_processing": "data processing",

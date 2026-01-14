@@ -145,6 +145,7 @@
       "documentation": "文档",
       "allCategory": "全部",
       "categories": {
+        "ml": "ml",
         "devops": "devops",
         "governance": "治理",
         "data_processing": "数据处理",

@@ -154,6 +154,7 @@
       "documentation": "documentation",
       "allCategory": "tous",
       "categories": {
+        "ml": "ml",
         "devops": "devops",
         "governance": "gouvernance",
         "data_processing": "traitement de données",
