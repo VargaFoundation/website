@@ -350,7 +350,7 @@ const projects: Project[] = [
         id: "tarn",
         name: "tarn",
         featured: true,
-        description: "tarn vise à supporter l'inférence de modèles de machine learning (ML) et deep learning (DL) en mode online et batch, avec une scalabilité horizontale automatique, un load balancing intégré, une haute disponibilité, et une intégration native avec l'écosystème Hadoop (HDFS pour stockage, YARN pour orchestratio",
+        description: "tarn vise à supporter l'inférence de modèles de machine learning (ML) et deep learning (DL) en mode online et batch, avec une scalabilité horizontale automatique, un load balancing intégré, une haute disponibilité, et une intégration native avec l'écosystème Hadoop (HDFS pour stockage, YARN pour orchestration",
         descriptionI18n: {
             en: "",
             fr: "tarn vise à supporter l'inférence de modèles de machine learning (ML) et deep learning (DL) en mode online et batch, avec une scalabilité horizontale automatique, un load balancing intégré, une haute disponibilité, et une intégration native avec l'écosystème Hadoop (HDFS pour stockage, YARN pour orchestration",
@@ -381,6 +381,47 @@ const projects: Project[] = [
             steps: [
                 'git clone https://github.com/vargafoundation/tarn',
                 'cd tarn'
+            ]
+        },
+        usage: {
+            basicExample: ``
+        },
+        roadmap: [
+        ]
+    },
+    {
+        id: "kirka",
+        name: "kirka",
+        featured: true,
+        description: "MLflow on Hadoop, using HDFS as a model registry and HBase for metrics and experiences",
+        descriptionI18n: {
+            en: "",
+            fr: "kirka est un portage de MLflow utilisant Hadoop, notamment HDFS en tant que model registry et HBase pour le stockage des métriques et des expériences,
+            zh: "s"
+        },
+        category: "ml",
+        language: "Java",
+        stars: 1,
+        forks: 0,
+        contributors: 1,
+        lastUpdate: "2026-12-30",
+        status: "beta",
+        icon: Database,
+        features: [
+            "hadoop"
+        ],
+        github: "https://github.com/vargafoundation/kirka",
+        demo: "https://demo.varga.foundation",
+        docs: "https://docs.varga.foundation",
+        installation: {
+            requirements: [
+                'Java 17+',
+                'Docker',
+                '4GB RAM minimum'
+            ],
+            steps: [
+                'git clone https://github.com/vargafoundation/kirka',
+                'cd kirka'
             ]
         },
         usage: {
