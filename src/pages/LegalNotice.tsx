@@ -28,7 +28,7 @@ export default function LegalNotice() {
                   <strong className="text-black">association:</strong> Varga Foundation<br />
                   <strong className="text-black">forme:</strong> Association déclarée<br />
                   <strong className="text-black">waldec:</strong> W784011864<br />
-                  <strong className="text-black">address:</strong> 2 rue Vauban, 78000 Versailles, France<br />
+                  <strong className="text-black">address:</strong> 5 bis rue Saint Charles, 78000 Versailles, France<br />
                   <strong className="text-black">président:</strong> Vincent Devillers<br />
                   <strong className="text-black">contact:</strong> {info.mail.contact}
                 </p>
