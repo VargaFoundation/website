@@ -45,6 +45,70 @@ export interface Project {
 
 const projects: Project[] = [
     {
+        id: "ecphoria",
+        name: "ecphoria",
+        featured: true,
+        description: "une plateforme de mémoire open source pour agents IA : une mémoire durable et hautement disponible qui exécute aussi les agents, dans un seul binaire Rust",
+        descriptionI18n: {
+            en: "an open-source memory platform for AI agents: a durable, highly-available memory that also runs the agents, in a single Rust binary",
+            fr: "une plateforme de mémoire open source pour agents IA : une mémoire durable et hautement disponible qui exécute aussi les agents, dans un seul binaire Rust",
+            zh: "面向 AI 智能体的开源记忆平台：在单个 Rust 二进制文件中提供持久、高可用的记忆，并运行智能体"
+        },
+        longDescriptionI18n: {
+            en: "Ecphoria gives AI agents a durable memory with bi-temporal facts, deterministic contradiction resolution, deduplication and hybrid BM25+vector retrieval — and runs the agents on top of it. PostgreSQL wire-compatible, MCP-native, and deployable via Docker or Kubernetes with Raft-based clustering for HA.",
+            fr: "Ecphoria donne aux agents IA une mémoire durable avec des faits bi-temporels, une résolution déterministe des contradictions, une déduplication et une recherche hybride BM25+vecteurs — et exécute les agents par-dessus. Compatible protocole PostgreSQL, native MCP, déployable via Docker ou Kubernetes avec clustering Raft pour la haute disponibilité."
+        },
+        category: "ml",
+        language: "Rust",
+        stars: 1,
+        forks: 0,
+        contributors: 1,
+        lastUpdate: "2026-07-19",
+        status: "beta",
+        icon: Brain,
+        features: [
+            "mémoire bi-temporelle",
+            "résolution de contradictions",
+            "recherche hybride BM25 + vecteurs",
+            "protocole PostgreSQL",
+            "natif MCP",
+            "clustering Raft (HA)"
+        ],
+        github: "https://github.com/vargafoundation/ecphoria",
+        docs: "https://docs.varga.foundation/docs/ecphoria",
+        installation: {
+            requirements: [
+                'Docker',
+                'Rust 1.80+ (pour build depuis les sources)',
+                'Kubernetes (optionnel, pour la HA)',
+                '2GB RAM minimum'
+            ],
+            steps: [
+                'docker run -p 8432:8432 -p 5432:5432 -v ecphoria-data:/data ghcr.io/vargafoundation/ecphoria:latest',
+                '# ou depuis les sources :',
+                'git clone https://github.com/vargafoundation/ecphoria',
+                'cd ecphoria',
+                'cargo run --bin ecphoria-server'
+            ]
+        },
+        usage: {
+            basicExample: `curl -X POST http://localhost:8432/api/v1/memories \\
+  -H 'content-type: application/json' \\
+  -d '{"content":"Alice prefers window seats","user_id":"alice"}'`
+        },
+        roadmap: [
+            {
+                version: '0.1',
+                features: [
+                    'substrat mémoire (épisodique, sémantique, état, cognition)',
+                    'runtime d\'agents durable + HITL + workflows',
+                    'clustering Raft + sharding multi-groupes'
+                ],
+                timeline: 'Q3 2026'
+            }
+        ]
+    },
+    {
         id: "nexberos",
         name: "nexberos",
         featured: false,
